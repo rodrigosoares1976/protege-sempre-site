@@ -4,918 +4,1268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Protege Sempre | Redes de Proteção, Telas Mosquiteiras, Gatil e Insulfilm em Varginha</title>
-  <meta name="description" content="Protege Sempre em Varginha-MG e região. Instalação de redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm com acabamento profissional. Solicite orçamento pelo WhatsApp." />
-  <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, insulfilm Varginha, gatil Varginha, rede para sacada, rede para janela, proteção para pets, Protege Sempre" />
-  <meta name="theme-color" content="#07111f" />
+  <title>Protege Sempre | Redes de Proteção em Varginha-MG</title>
+  <meta name="description" content="Redes de proteção, telas mosquiteiras, gatil, insulfilm e redes para quadras em Varginha-MG e região. Orçamento sem compromisso pelo WhatsApp." />
+  <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, gatil Varginha, proteção para gatos, insulfilm Varginha, redes para quadras, Protege Sempre" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#00c853" />
+  <link rel="canonical" href="https://protegesempre.com.br/" />
 
-  <meta property="og:title" content="Protege Sempre | Segurança para sua família, crianças e pets" />
-  <meta property="og:description" content="Redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm em Varginha-MG e região." />
+  <meta property="og:title" content="Protege Sempre | Redes de Proteção em Varginha-MG" />
+  <meta property="og:description" content="Redes de proteção, telas mosquiteiras, gatil, insulfilm e redes para quadras. Orçamento rápido pelo WhatsApp." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://protegesempre.com.br" />
+  <meta property="og:url" content="https://protegesempre.com.br/" />
   <meta property="og:locale" content="pt_BR" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg: #040816;
-      --bg2: #07111f;
-      --surface: #0b1628;
-      --surface2: #101f36;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --soft: #94a3b8;
-      --line: rgba(255,255,255,.14);
-      --glass: rgba(255,255,255,.075);
-      --glass2: rgba(255,255,255,.13);
-      --yellow: #fbbf24;
-      --orange: #f97316;
-      --green: #22c55e;
-      --blue: #38bdf8;
-      --red: #ef4444;
-      --shadow: 0 32px 100px rgba(0,0,0,.42);
-      --radius: 32px;
+      --verde: #00c853;
+      --verde-escuro: #00a844;
+      --verde-neon: #39ff85;
+      --preto: #0a0a0a;
+      --preto2: #111111;
+      --cinza-escuro: #1a1a1a;
+      --cinza: #2a2a2a;
+      --cinza-medio: #3a3a3a;
+      --cinza-claro: #888;
+      --branco: #ffffff;
+      --branco-suave: #f0f0f0;
+      --texto-secundario: #aaaaaa;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --sombra: 0 8px 32px rgba(0,0,0,0.4);
+      --sombra-verde: 0 4px 24px rgba(0,200,83,0.25);
+      --transicao: all 0.3s cubic-bezier(0.4,0,0.2,1);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 10% 5%, rgba(56,189,248,.22), transparent 30%),
-        radial-gradient(circle at 88% 12%, rgba(251,191,36,.22), transparent 32%),
-        radial-gradient(circle at 50% 92%, rgba(34,197,94,.16), transparent 36%),
-        linear-gradient(180deg, #040816 0%, #07111f 44%, #020617 100%);
+      font-family: 'Inter', sans-serif;
+      background: var(--preto);
+      color: var(--branco);
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--preto2); }
+    ::-webkit-scrollbar-thumb { background: var(--verde); border-radius: 3px; }
+
+    .navbar {
       position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 44px 44px;
-      mask-image: linear-gradient(to bottom, #000 0%, transparent 76%);
-      pointer-events: none;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    button, input, select, textarea { font: inherit; }
-
-    .container {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 80;
-      backdrop-filter: blur(22px);
-      background: rgba(2, 6, 23, .74);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 76px;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: var(--transicao);
     }
 
-    .brand {
-      display: inline-flex;
+    .navbar.scrolled {
+      background: rgba(10,10,10,0.98);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .nav-logo {
+      display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: -.04em;
-      font-size: 1.12rem;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
     }
 
-    .brand-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      color: #07111f;
-      background: linear-gradient(135deg, var(--yellow), var(--green));
-      box-shadow: 0 18px 48px rgba(251,191,36,.28);
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: var(--verde);
+      color: var(--preto);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
     }
 
-    .brand-mark svg { width: 26px; height: 26px; }
+    .nav-logo span { color: var(--verde); }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 700;
+      gap: 6px;
+      list-style: none;
     }
 
     .nav-links a {
-      position: relative;
-      transition: .2s ease;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--texto-secundario);
+      transition: var(--transicao);
     }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 100%;
-      bottom: -8px;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--yellow), var(--green));
-      transition: .25s ease;
+    .nav-links a:hover { color: var(--branco); background: rgba(255,255,255,0.07); }
+
+    .nav-cta {
+      background: var(--verde) !important;
+      color: var(--preto) !important;
+      font-weight: 700 !important;
+      padding: 9px 18px !important;
+      border-radius: 10px !important;
     }
 
-    .nav-links a:hover { color: #fff; }
-    .nav-links a:hover::after { right: 0; }
+    .nav-cta:hover { background: var(--verde-escuro) !important; transform: translateY(-1px); }
 
-    .btn {
-      min-height: 50px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.16);
-      font-weight: 850;
-      cursor: pointer;
-      transition: .25s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      border: 0;
-      color: #111827;
-      background: linear-gradient(135deg, var(--yellow), var(--orange));
-      box-shadow: 0 18px 46px rgba(249,115,22,.34);
-    }
-
-    .btn-primary:hover,
-    .btn-ghost:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
-
-    .btn-ghost {
-      color: #fff;
-      background: rgba(255,255,255,.08);
-    }
-
-    .btn-green {
-      border: 0;
-      background: linear-gradient(135deg, #22c55e, #86efac);
-      color: #052e16;
-      box-shadow: 0 18px 48px rgba(34,197,94,.28);
-    }
-
-    .mobile-menu {
+    .nav-hamburguer {
       display: none;
-      width: 46px;
-      height: 46px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.08);
-      color: #fff;
-      font-size: 1.2rem;
+      flex-direction: column;
+      gap: 5px;
       cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
     }
 
-    .mobile-drawer {
-      display: none;
-      border-top: 1px solid var(--line);
-      padding: 12px 0 18px;
-    }
-
-    .mobile-drawer a {
+    .nav-hamburguer span {
       display: block;
-      padding: 13px 0;
-      color: var(--muted);
-      font-weight: 750;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      width: 22px; height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: var(--transicao);
+    }
+
+    .nav-hamburguer.ativo span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburguer.ativo span:nth-child(2) { opacity: 0; }
+    .nav-hamburguer.ativo span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 24px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-mobile.ativo { display: flex; }
+
+    .nav-mobile a {
+      display: block;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 500;
+      color: var(--texto-secundario);
+      transition: var(--transicao);
+    }
+
+    .nav-mobile a:hover { color: var(--branco); background: rgba(255,255,255,0.07); }
+
+    .nav-mobile .nav-cta {
+      background: var(--verde) !important;
+      color: var(--preto) !important;
+      text-align: center;
+      margin-top: 8px;
     }
 
     .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       position: relative;
-      padding: 82px 0 46px;
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,200,83,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0,200,83,0.06) 0%, transparent 60%),
+        var(--preto);
     }
 
     .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1fr .94fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,200,83,0.12);
+      border: 1px solid rgba(0,200,83,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--verde);
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--verde);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .destaque { color: var(--verde); }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--texto-secundario);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    .hero-acoes {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      transition: var(--transicao);
+      cursor: pointer;
+    }
+
+    .btn-primario {
+      background: var(--verde);
+      color: var(--preto);
+      border: none;
+    }
+
+    .btn-primario:hover {
+      background: var(--verde-escuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-verde);
+    }
+
+    .btn-secundario {
+      background: transparent;
+      color: var(--branco);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .btn-secundario:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--verde);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: var(--texto-secundario);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: var(--transicao);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--verde), transparent);
+      opacity: 0;
+      transition: var(--transicao);
+    }
+
+    .hero-card:hover { transform: translateY(-4px); border-color: rgba(0,200,83,0.2); }
+    .hero-card:hover::before { opacity: 1; }
+
+    .hero-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-desc {
+      font-size: 0.78rem;
+      color: var(--texto-secundario);
+      line-height: 1.5;
+    }
+
+    .hero-card.destaque-card {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,200,83,0.05));
+      border-color: rgba(0,200,83,0.25);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+    }
+
+    .hero-card.destaque-card .hero-card-icon { margin: 0; font-size: 2rem; }
+
+    .trust-bar {
+      background: var(--cinza-escuro);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 20px 24px;
+      overflow: hidden;
+    }
+
+    .trust-track {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      animation: scroll-track 22s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes scroll-track {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--texto-secundario);
+    }
+
+    section { padding: 100px 24px; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(0,200,83,0.1);
+      border: 1px solid rgba(0,200,83,0.25);
+      color: var(--verde);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .section-titulo {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .section-titulo .verde { color: var(--verde); }
+
+    .section-subtitulo {
+      font-size: 1rem;
+      color: var(--texto-secundario);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+    }
+
+    .section-header-left { flex: 1; }
+
+    #servicos,
+    #antes-depois,
+    #depoimentos,
+    #orcamento { background: var(--preto2); }
+
+    #galeria,
+    #processo,
+    #duvidas { background: var(--preto); }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .servico-card {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: var(--transicao);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .servico-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--verde);
+      transform: scaleX(0);
+      transition: var(--transicao);
+      transform-origin: left;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,200,83,0.2);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3), var(--sombra-verde);
+    }
+
+    .servico-card:hover::after { transform: scaleX(1); }
+
+    .servico-icon {
+      width: 52px; height: 52px;
+      background: rgba(0,200,83,0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: var(--transicao);
+    }
+
+    .servico-card:hover .servico-icon {
+      background: rgba(0,200,83,0.2);
+      transform: scale(1.1);
+    }
+
+    .servico-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .servico-card p {
+      font-size: 0.88rem;
+      color: var(--texto-secundario);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .servico-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .servico-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.75rem;
+      color: var(--cinza-claro);
+      font-weight: 500;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .galeria-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--cinza-escuro);
+      cursor: pointer;
+      min-height: 260px;
+    }
+
+    .galeria-item:nth-child(1) {
+      grid-column: span 2;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 260px;
+      transition: transform 0.5s ease;
+    }
+
+    .galeria-item:hover img { transform: scale(1.05); }
+
+    .galeria-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 55%);
+      opacity: 0;
+      transition: var(--transicao);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+
+    .galeria-categoria {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--preto);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .galeria-info h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .galeria-placeholder,
+    .antes-depois-placeholder {
+      width: 100%;
+      min-height: 260px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--cinza-claro);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .galeria-placeholder-icon { font-size: 2rem; opacity: 0.4; }
+    .galeria-placeholder-text { opacity: 0.5; font-size: 0.78rem; }
+
+    .antes-depois-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .antes-depois-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .antes-depois-img {
+      width: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .antes-depois-placeholder {
+      min-height: 320px;
+    }
+
+    .antes-depois-label {
+      position: absolute;
+      top: 16px; left: 16px;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .label-antes {
+      background: rgba(255,255,255,0.15);
+      color: var(--branco);
+      backdrop-filter: blur(8px);
+    }
+
+    .label-depois {
+      background: var(--verde);
+      color: var(--preto);
+    }
+
+    .antes-depois-desc {
+      padding: 20px 24px;
+    }
+
+    .antes-depois-desc h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .antes-depois-desc p {
+      font-size: 0.82rem;
+      color: var(--texto-secundario);
+    }
+
+    .processo-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .processo-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--verde), rgba(0,200,83,0.2), rgba(0,200,83,0.2), var(--verde));
+      z-index: 0;
+    }
+
+    .processo-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .processo-num {
+      width: 72px; height: 72px;
+      background: var(--cinza-escuro);
+      border: 2px solid rgba(0,200,83,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--verde);
+      position: relative;
+    }
+
+    .processo-num::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: rgba(0,200,83,0.08);
+      z-index: -1;
+    }
+
+    .processo-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .processo-step p {
+      font-size: 0.85rem;
+      color: var(--texto-secundario);
+      line-height: 1.6;
+    }
+
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .depoimento-card {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: var(--transicao);
+    }
+
+    .depoimento-card:hover {
+      border-color: rgba(0,200,83,0.2);
+      transform: translateY(-4px);
+    }
+
+    .depoimento-estrelas {
+      color: #FFD700;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .depoimento-texto {
+      font-size: 0.92rem;
+      color: var(--texto-secundario);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .depoimento-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .depoimento-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde), var(--verde-escuro));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--preto);
+      flex-shrink: 0;
+    }
+
+    .depoimento-autor-nome {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .depoimento-autor-local {
+      font-size: 0.78rem;
+      color: var(--texto-secundario);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transicao);
+    }
+
+    .faq-item.ativo {
+      border-color: rgba(0,200,83,0.25);
+    }
+
+    .faq-pergunta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-pergunta-texto {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .faq-icone {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(0,200,83,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      color: var(--verde);
+      transition: var(--transicao);
+    }
+
+    .faq-item.ativo .faq-icone { transform: rotate(45deg); background: rgba(0,200,83,0.2); }
+
+    .faq-resposta {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 24px;
+    }
+
+    .faq-resposta-inner {
+      font-size: 0.88rem;
+      color: var(--texto-secundario);
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    .faq-item.ativo .faq-resposta { max-height: 220px; }
+
+    .orcamento-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
       gap: 48px;
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-weight: 800;
-      margin-bottom: 22px;
-      font-size: .9rem;
-    }
-
-    .pulse {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 8px rgba(34,197,94,.14);
-    }
-
-    h1 {
-      font-size: clamp(3rem, 6.2vw, 6.8rem);
-      line-height: .88;
-      letter-spacing: -.088em;
-      margin-bottom: 26px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #fff 0%, #fde68a 46%, #86efac 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text {
-      max-width: 650px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: clamp(1.08rem, 1.55vw, 1.28rem);
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
+    .orcamento-beneficios {
+      margin-top: 32px;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 14px;
+    }
+
+    .orcamento-beneficio {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(0,200,83,0.06);
+      border: 1px solid rgba(0,200,83,0.15);
+      border-radius: 12px;
+    }
+
+    .orcamento-beneficio-texto {
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .orcamento-form {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 36px;
+    }
+
+    .orcamento-form h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .orcamento-form-desc {
+      font-size: 0.85rem;
+      color: var(--texto-secundario);
       margin-bottom: 28px;
     }
 
-    .trust-strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      max-width: 740px;
-    }
+    .form-grupo { margin-bottom: 16px; }
 
-    .trust-pill {
-      padding: 13px 14px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: .84rem;
-      font-weight: 760;
-    }
-
-    .showcase {
-      position: relative;
-      min-height: 620px;
-      border-radius: 46px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.17);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05)),
-        radial-gradient(circle at 26% 22%, rgba(56,189,248,.32), transparent 28%),
-        radial-gradient(circle at 78% 70%, rgba(251,191,36,.28), transparent 32%);
-      box-shadow: var(--shadow);
-      isolation: isolate;
-    }
-
-    .showcase::before {
-      content: "";
-      position: absolute;
-      inset: -90px;
-      background:
-        linear-gradient(120deg, transparent 0 47%, rgba(255,255,255,.18) 48% 52%, transparent 53% 100%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 27px),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 27px);
-      transform: rotate(-8deg);
-      z-index: -1;
-    }
-
-    .showcase-photo {
-      position: absolute;
-      inset: 46px 42px 118px;
-      border-radius: 34px;
-      overflow: hidden;
-      border: 12px solid rgba(226,232,240,.9);
-      background:
-        linear-gradient(135deg, rgba(14,165,233,.34), rgba(15,23,42,.12)),
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,.54), transparent 22%);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,.2), 0 28px 70px rgba(0,0,0,.34);
-    }
-
-    .showcase-photo::before,
-    .showcase-photo::after {
-      content: "";
-      position: absolute;
-      background: rgba(226,232,240,.92);
-      z-index: 2;
-    }
-
-    .showcase-photo::before { width: 12px; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
-    .showcase-photo::after { height: 12px; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
-
-    .showcase-net {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background:
-        repeating-linear-gradient(45deg, rgba(255,255,255,.22) 0 1px, transparent 1px 12px),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 12px);
-      opacity: .82;
-    }
-
-    .float-card {
-      position: absolute;
-      z-index: 4;
-      padding: 17px 19px;
-      border-radius: 24px;
-      background: rgba(2, 6, 23, .78);
-      border: 1px solid rgba(255,255,255,.16);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 22px 58px rgba(0,0,0,.3);
-    }
-
-    .float-card strong { display: block; margin-bottom: 3px; }
-    .float-card span { color: var(--soft); font-size: .86rem; }
-    .f1 { top: 30px; right: 24px; }
-    .f2 { bottom: 34px; left: 22px; }
-    .f3 { right: 28px; bottom: 152px; }
-
-    .mini-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .mini-stat {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
-      border-radius: 24px;
-      padding: 20px;
-    }
-
-    .mini-stat strong {
+    .form-grupo label {
       display: block;
-      font-size: 1.72rem;
-      letter-spacing: -.05em;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--texto-secundario);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
     }
 
-    .mini-stat span {
-      color: var(--soft);
-      font-size: .9rem;
-    }
-
-    section { padding: 76px 0; }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 28px;
-      margin-bottom: 30px;
-    }
-
-    .section-head h2 {
-      max-width: 790px;
-      font-size: clamp(2rem, 3.8vw, 3.9rem);
-      line-height: .98;
-      letter-spacing: -.067em;
-    }
-
-    .section-head p {
-      max-width: 460px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service-card {
-      min-height: 308px;
-      padding: 30px;
-      border-radius: var(--radius);
-      background: var(--glass);
-      border: 1px solid var(--line);
-      transition: .25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -20% -44% -20%;
-      height: 150px;
-      background: radial-gradient(circle, rgba(251,191,36,.22), transparent 62%);
-      opacity: 0;
-      transition: .25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      background: var(--glass2);
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon {
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 21px;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, rgba(251,191,36,.24), rgba(34,197,94,.18));
-      border: 1px solid rgba(255,255,255,.16);
-      font-size: 1.38rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.42rem;
-      letter-spacing: -.035em;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      line-height: 1.68;
-      margin-bottom: 18px;
-    }
-
-    .service-list {
-      display: grid;
-      gap: 8px;
-      color: var(--soft);
-      font-size: .92rem;
-    }
-
-    .service-list span {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .photo-panel {
-      min-height: 460px;
-      border-radius: 40px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
-        url("img/familia-protegida.jpg") center/cover no-repeat;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .photo-panel::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, transparent 20%, rgba(2,6,23,.92) 100%),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 1px, transparent 1px 12px);
-    }
-
-    .panel-copy {
-      border-radius: 40px;
-      padding: 44px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(circle at top right, rgba(34,197,94,.2), transparent 28%),
-        rgba(255,255,255,.08);
-    }
-
-    .panel-copy h2 {
-      font-size: clamp(2rem, 4vw, 4.05rem);
-      letter-spacing: -.067em;
-      line-height: .98;
-      margin-bottom: 18px;
-    }
-
-    .panel-copy p {
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 1.08rem;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .benefit {
-      padding: 15px;
-      border-radius: 19px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-weight: 760;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      grid-auto-rows: 260px;
-      gap: 18px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 34px;
-      border: 1px solid rgba(255,255,255,.16);
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
-        radial-gradient(circle at 30% 20%, rgba(251,191,36,.24), transparent 28%),
-        radial-gradient(circle at 80% 70%, rgba(34,197,94,.20), transparent 30%),
-        #0f172a;
-      box-shadow: 0 22px 70px rgba(0,0,0,.24);
-    }
-
-    .gallery-item.featured { grid-row: span 2; }
-
-    .gallery-photo {
-      position: absolute;
-      inset: 0;
+    .form-grupo input,
+    .form-grupo select {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.02);
-      transition: .38s ease;
+      padding: 13px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      color: var(--branco);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      transition: var(--transicao);
+      appearance: none;
     }
 
-    .gallery-item:hover .gallery-photo { transform: scale(1.08); }
+    .form-grupo input::placeholder { color: var(--cinza-claro); }
 
-    .gallery-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 18%, rgba(2,6,23,.90) 100%);
+    .form-grupo input:focus,
+    .form-grupo select:focus {
+      outline: none;
+      border-color: rgba(0,200,83,0.5);
+      background: rgba(0,200,83,0.04);
     }
 
-    .gallery-fallback {
-      position: absolute;
-      inset: 20px 20px 86px;
-      border-radius: 26px;
-      border: 10px solid rgba(226,232,240,.88);
-      background:
-        repeating-linear-gradient(45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px),
-        linear-gradient(135deg, rgba(34,197,94,.16), rgba(56,189,248,.16));
-    }
+    .form-grupo select option { background: #1a1a1a; color: var(--branco); }
 
-    .gallery-content {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 22px;
-      z-index: 2;
-    }
-
-    .gallery-tag {
-      display: inline-flex;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(251,191,36,.94);
-      color: #111827;
-      font-weight: 900;
-      font-size: .78rem;
-      margin-bottom: 10px;
-    }
-
-    .gallery-content h3 {
-      font-size: 1.25rem;
-      letter-spacing: -.04em;
-      margin-bottom: 5px;
-    }
-
-    .gallery-content p {
-      color: var(--muted);
-      line-height: 1.5;
-      font-size: .92rem;
-    }
-
-    .before-after {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .ba-card {
-      min-height: 380px;
-      border-radius: 38px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      position: relative;
-      background: rgba(255,255,255,.08);
-      box-shadow: var(--shadow);
-    }
-
-    .ba-card::before {
-      content: "";
-      position: absolute;
-      inset: 30px;
-      border-radius: 28px;
-      border: 10px solid rgba(226,232,240,.86);
-      background:
-        linear-gradient(135deg, rgba(56,189,248,.22), rgba(255,255,255,.08)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 12px);
-    }
-
-    .ba-card.after::before {
-      background:
-        linear-gradient(135deg, rgba(34,197,94,.25), rgba(251,191,36,.12)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.24) 0 1px, transparent 1px 10px),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 10px);
-    }
-
-    .ba-label {
-      position: absolute;
-      left: 24px;
-      bottom: 24px;
-      z-index: 2;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 900;
-      background: rgba(2,6,23,.78);
-      border: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      counter-reset: step;
-    }
-
-    .step {
-      padding: 29px;
-      border-radius: 30px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
-      position: relative;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      display: inline-flex;
-      margin-bottom: 18px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--yellow), var(--orange));
-      color: #111827;
-      font-weight: 950;
-    }
-
-    .step h3 { margin-bottom: 10px; }
-    .step p { color: var(--muted); line-height: 1.6; font-size: .95rem; }
-
-    .reviews {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .review {
-      padding: 29px;
-      min-height: 235px;
-      border-radius: 32px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
-    }
-
-    .stars { color: var(--yellow); letter-spacing: 2px; margin-bottom: 16px; }
-    .review p { color: var(--muted); line-height: 1.68; margin-bottom: 18px; }
-    .review strong { display: block; }
-
-    .faq {
-      display: grid;
-      gap: 12px;
-    }
-
-    details {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
-      border-radius: 22px;
-      padding: 18px 20px;
-    }
-
-    summary {
+    .form-submit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--verde);
+      color: var(--preto);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px;
+      border-radius: 12px;
+      border: none;
       cursor: pointer;
-      font-weight: 850;
+      transition: var(--transicao);
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--verde-escuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-verde);
+    }
+
+    footer {
+      background: var(--cinza-escuro);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 24px 28px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 28px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-logo-icon {
+      width: 34px; height: 34px;
+      background: var(--verde);
+      color: var(--preto);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .footer-logo span { color: var(--verde); }
+
+    .footer-brand-desc {
+      font-size: 0.85rem;
+      color: var(--texto-secundario);
+      line-height: 1.7;
+      max-width: 320px;
+      margin-bottom: 20px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transicao);
+      color: var(--texto-secundario);
+    }
+
+    .footer-social-link:hover {
+      border-color: var(--verde);
+      color: var(--verde);
+      background: rgba(0,200,83,0.08);
+    }
+
+    .footer-col-titulo {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--branco);
+    }
+
+    .footer-col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       list-style: none;
     }
 
-    summary::-webkit-details-marker { display: none; }
-
-    details p {
-      color: var(--muted);
-      line-height: 1.65;
-      margin-top: 12px;
+    .footer-col-links a {
+      font-size: 0.85rem;
+      color: var(--texto-secundario);
+      transition: var(--transicao);
     }
 
-    .cta {
-      border-radius: 46px;
-      padding: 50px;
-      background:
-        radial-gradient(circle at top right, rgba(34,197,94,.24), transparent 32%),
-        radial-gradient(circle at bottom left, rgba(251,191,36,.18), transparent 30%),
-        linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
-      border: 1px solid rgba(255,255,255,.17);
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 28px;
-      align-items: center;
-      box-shadow: var(--shadow);
-    }
+    .footer-col-links a:hover { color: var(--verde); }
 
-    .cta h2 {
-      font-size: clamp(2.15rem, 4.2vw, 4.3rem);
-      line-height: .95;
-      letter-spacing: -.067em;
-      margin-bottom: 18px;
-    }
-
-    .cta p { color: var(--muted); line-height: 1.72; }
-
-    .quote-card {
-      padding: 24px;
-      border-radius: 30px;
-      background: rgba(2,6,23,.62);
-      border: 1px solid var(--line);
-    }
-
-    .quote-card label {
-      display: block;
-      color: var(--soft);
-      font-size: .85rem;
-      margin-bottom: 8px;
-    }
-
-    .quote-card input,
-    .quote-card select {
-      width: 100%;
-      min-height: 50px;
-      padding: 0 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.08);
-      color: var(--text);
-      outline: none;
-      margin-bottom: 12px;
-    }
-
-    .quote-card select option { color: #111827; }
-    .quote-card .btn { width: 100%; margin-top: 8px; }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 36px 0 48px;
-      color: var(--soft);
-    }
-
-    .footer-grid {
+    .footer-bottom {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 90;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: #22c55e;
-      color: #052e16;
-      display: grid;
-      place-items: center;
-      box-shadow: 0 20px 55px rgba(34,197,94,.38);
-      font-size: 1.45rem;
-      font-weight: 950;
-    }
-
-    .sticky-mobile-cta {
-      display: none;
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      z-index: 89;
-      border-radius: 999px;
-      min-height: 56px;
       align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      color: #052e16;
-      background: linear-gradient(135deg, #22c55e, #86efac);
-      box-shadow: 0 18px 48px rgba(34,197,94,.28);
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .reveal {
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--cinza-claro);
+    }
+
+    .footer-services {
+      font-size: 0.78rem;
+      color: var(--cinza-claro);
+    }
+
+    .float-wpp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .float-wpp-bubble {
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--branco);
+      white-space: nowrap;
       opacity: 0;
-      transform: translateY(22px);
-      transition: .7s ease;
+      transform: translateY(8px);
+      transition: var(--transicao);
+      pointer-events: none;
     }
 
-    .reveal.visible {
+    .float-wpp:hover .float-wpp-bubble {
       opacity: 1;
       transform: translateY(0);
     }
 
-    @media (max-width: 1020px) {
-      .nav-links { display: none; }
-      .mobile-menu { display: grid; place-items: center; }
-      .mobile-drawer.open { display: block; }
-      .hero { padding-top: 54px; }
-      .hero-grid,
-      .split,
-      .cta { grid-template-columns: 1fr; }
-      .showcase { min-height: 510px; }
-      .trust-strip { grid-template-columns: repeat(2, 1fr); }
-      .service-grid,
-      .reviews { grid-template-columns: 1fr; }
-      .process,
-      .gallery-grid,
-      .before-after { grid-template-columns: 1fr 1fr; }
-      .gallery-item.featured { grid-row: span 1; }
-      .section-head { display: block; }
-      .section-head p { margin-top: 16px; }
-      .mini-stats { grid-template-columns: repeat(2, 1fr); }
+    .float-wpp-btn {
+      width: 58px; height: 58px;
+      background: #25d366;
+      color: var(--preto);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: var(--transicao);
+      position: relative;
     }
 
-    @media (max-width: 680px) {
-      .container { width: min(100% - 24px, 1180px); }
-      .nav { min-height: 70px; }
-      .brand { font-size: 1rem; }
-      .brand-mark { width: 40px; height: 40px; border-radius: 14px; }
-      .nav > .btn { display: none; }
-      .hero-actions .btn { width: 100%; }
-      .trust-strip,
-      .process,
-      .gallery-grid,
-      .before-after,
-      .benefits,
-      .mini-stats { grid-template-columns: 1fr; }
-      .gallery-grid { grid-auto-rows: 280px; }
-      .showcase { min-height: 430px; border-radius: 32px; }
-      .showcase-photo { inset: 52px 24px 98px; border-width: 9px; }
-      .float-card { padding: 12px 14px; border-radius: 18px; }
-      .f1 { top: 16px; right: 12px; }
-      .f2 { left: 12px; bottom: 18px; }
-      .f3 { right: 12px; bottom: 118px; }
-      .panel-copy,
-      .cta { padding: 28px; border-radius: 32px; }
-      .photo-panel { min-height: 340px; }
-      section { padding: 52px 0; }
-      .whatsapp-float { display: none; }
-      .sticky-mobile-cta { display: flex; }
-      body { padding-bottom: 78px; }
+    .float-wpp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+    }
+
+    .float-wpp-ping {
+      position: absolute;
+      top: 0; right: 0;
+      width: 14px; height: 14px;
+      background: var(--verde-neon);
+      border-radius: 50%;
+      border: 2px solid var(--preto);
+      animation: ping 2s infinite;
+    }
+
+    @keyframes ping {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    .mobile-bottom-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 998;
+      background: var(--verde);
+      color: var(--preto);
+      border-radius: 14px;
+      padding: 15px 18px;
+      text-align: center;
+      font-weight: 800;
+      box-shadow: 0 8px 30px rgba(0,200,83,0.35);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 72px 20px; }
+
+      .navbar { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-hamburguer { display: flex; }
+
+      .hero { padding: 110px 20px 70px; }
+      .hero-container { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 2.35rem; }
+
+      .servicos-grid { grid-template-columns: 1fr; }
+
+      .galeria-grid { grid-template-columns: 1fr; }
+      .galeria-item:nth-child(1) { grid-column: span 1; }
+
+      .antes-depois-container { grid-template-columns: 1fr; }
+
+      .processo-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .processo-steps::before { display: none; }
+
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .orcamento-wrapper { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .section-header { flex-direction: column; align-items: flex-start; }
+      .hero-stats { gap: 24px; }
+      .float-wpp { display: none; }
+      .mobile-bottom-cta { display: block; }
+      body { padding-bottom: 76px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-acoes { flex-direction: column; }
+      .btn-primario, .btn-secundario { width: 100%; justify-content: center; }
+      .processo-steps { grid-template-columns: 1fr; }
+      .hero-stats { justify-content: space-between; gap: 16px; }
+      .orcamento-form { padding: 26px 20px; }
     }
   </style>
 
@@ -924,7 +1274,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Protege Sempre",
-    "url": "https://protegesempre.com.br",
+    "url": "https://protegesempre.com.br/",
     "telephone": "+553599936636",
     "address": {
       "@type": "PostalAddress",
@@ -933,170 +1283,225 @@
       "addressCountry": "BR"
     },
     "areaServed": "Varginha-MG e região",
-    "description": "Instalação de redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm."
+    "description": "Redes de proteção, telas mosquiteiras, gatil, insulfilm e redes para quadras em Varginha-MG e região.",
+    "sameAs": [
+      "https://www.instagram.com/protege_sempre/"
+    ]
   }
   </script>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Protege Sempre">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.7-2.9 8.7-7 10-4.1-1.3-7-5.3-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M8.5 12.2l2.1 2.1 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        Protege Sempre
-      </a>
+  <nav class="navbar" id="navbar">
+    <a href="#inicio" class="nav-logo" aria-label="Protege Sempre">
+      <div class="nav-logo-icon">🛡️</div>
+      Protege<span>Sempre</span>
+    </a>
 
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="#servicos">Serviços</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#antes-depois">Antes e depois</a>
-        <a href="#processo">Como funciona</a>
-        <a href="#duvidas">Dúvidas</a>
-        <a href="#orcamento">Orçamento</a>
-      </nav>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#antes-depois">Antes e depois</a></li>
+      <li><a href="#processo">Como funciona</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a href="#orcamento" class="nav-cta">Orçamento</a></li>
+    </ul>
 
-      <a class="btn btn-primary" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">WhatsApp</a>
-      <button class="mobile-menu" type="button" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
-    </div>
+    <button class="nav-hamburguer" id="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <div class="container mobile-drawer" id="mobileDrawer">
-      <a href="#servicos" onclick="toggleMenu()">Serviços</a>
-      <a href="#galeria" onclick="toggleMenu()">Galeria</a>
-      <a href="#antes-depois" onclick="toggleMenu()">Antes e depois</a>
-      <a href="#processo" onclick="toggleMenu()">Como funciona</a>
-      <a href="#duvidas" onclick="toggleMenu()">Dúvidas</a>
-      <a href="#orcamento" onclick="toggleMenu()">Orçamento</a>
-    </div>
-  </header>
+  <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#antes-depois">Antes e depois</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="#orcamento" class="nav-cta">Solicitar orçamento</a>
+  </nav>
 
-  <main id="inicio">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <div class="eyebrow"><span class="pulse"></span> Atendimento em Varginha-MG e região</div>
-          <h1>Proteja sua família, <span class="gradient-text">crianças e pets.</span></h1>
-          <p class="hero-text">Redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm com acabamento profissional, visual discreto e orçamento sem compromisso pelo WhatsApp.</p>
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#orcamento">Solicitar orçamento</a>
-            <a class="btn btn-ghost" href="#galeria">Ver instalações</a>
+      <div class="hero-container">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            Atendimento em Varginha-MG e região
           </div>
 
-          <div class="trust-strip">
-            <div class="trust-pill">🛡️ Redes sob medida</div>
-            <div class="trust-pill">🐾 Proteção para pets</div>
-            <div class="trust-pill">🦟 Conforto sem insetos</div>
-            <div class="trust-pill">☀️ Insulfilm residencial</div>
-            <div class="trust-pill">📲 Orçamento rápido</div>
+          <h1>Proteja quem você <span class="destaque">ama.</span></h1>
+
+          <p class="hero-desc">
+            Redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm com acabamento profissional e visual discreto. Orçamento rápido pelo WhatsApp, sem compromisso.
+          </p>
+
+          <div class="hero-acoes">
+            <a href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." class="btn-primario" target="_blank" rel="noopener">
+              💬 Pedir orçamento agora
+            </a>
+            <a href="#galeria" class="btn-secundario">
+              📸 Ver instalações
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-label">Tipos de solução</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Sob medida</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">VGA</div>
+              <div class="hero-stat-label">e região</div>
+            </div>
           </div>
         </div>
 
-        <div class="showcase reveal" aria-label="Janela com rede de proteção">
-          <div class="showcase-photo"><div class="showcase-net"></div></div>
-          <div class="float-card f1"><strong>Segurança planejada</strong><span>Janelas, sacadas e varandas</span></div>
-          <div class="float-card f2"><strong>Acabamento profissional</strong><span>Instalação limpa e discreta</span></div>
-          <div class="float-card f3"><strong>Mais tranquilidade</strong><span>Para casa, empresa e condomínio</span></div>
+        <div class="hero-visual fade-up">
+          <div class="hero-cards">
+            <div class="hero-card">
+              <div class="hero-card-icon">🛡️</div>
+              <div class="hero-card-title">Redes de proteção</div>
+              <div class="hero-card-desc">Janelas, sacadas, varandas e escadas</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">🦟</div>
+              <div class="hero-card-title">Mosquiteiros</div>
+              <div class="hero-card-desc">Conforto com ventilação total</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">🐾</div>
+              <div class="hero-card-title">Proteção pet</div>
+              <div class="hero-card-desc">Gatil e fechamento de áreas</div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">☀️</div>
+              <div class="hero-card-title">Insulfilm</div>
+              <div class="hero-card-desc">Privacidade e conforto térmico</div>
+            </div>
+            <div class="hero-card destaque-card">
+              <div class="hero-card-icon">📲</div>
+              <div>
+                <div class="hero-card-title">Orçamento pelo WhatsApp</div>
+                <div class="hero-card-desc">Resposta rápida, sem burocracia e sem compromisso</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="container mini-stats">
-        <div class="mini-stat reveal"><strong>VGA</strong><span>Varginha e região</span></div>
-        <div class="mini-stat reveal"><strong>5+</strong><span>tipos de solução</span></div>
-        <div class="mini-stat reveal"><strong>100%</strong><span>sob medida</span></div>
-        <div class="mini-stat reveal"><strong>Whats</strong><span>atendimento direto</span></div>
       </div>
     </section>
+
+    <div class="trust-bar" aria-label="Serviços da Protege Sempre">
+      <div class="trust-track">
+        <div class="trust-item"><span>🛡️</span> Redes de proteção</div>
+        <div class="trust-item"><span>🦟</span> Telas mosquiteiras</div>
+        <div class="trust-item"><span>🐱</span> Gatil e proteção pet</div>
+        <div class="trust-item"><span>🏐</span> Quadras esportivas</div>
+        <div class="trust-item"><span>☀️</span> Insulfilm residencial</div>
+        <div class="trust-item"><span>🏢</span> Condomínios e empresas</div>
+        <div class="trust-item"><span>📍</span> Varginha-MG e região</div>
+        <div class="trust-item"><span>✅</span> Orçamento sem compromisso</div>
+        <div class="trust-item"><span>🛡️</span> Redes de proteção</div>
+        <div class="trust-item"><span>🦟</span> Telas mosquiteiras</div>
+        <div class="trust-item"><span>🐱</span> Gatil e proteção pet</div>
+        <div class="trust-item"><span>🏐</span> Quadras esportivas</div>
+        <div class="trust-item"><span>☀️</span> Insulfilm residencial</div>
+        <div class="trust-item"><span>🏢</span> Condomínios e empresas</div>
+        <div class="trust-item"><span>📍</span> Varginha-MG e região</div>
+        <div class="trust-item"><span>✅</span> Orçamento sem compromisso</div>
+      </div>
+    </div>
 
     <section id="servicos">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Soluções completas para proteger sua casa sem perder a beleza do ambiente.</h2>
-          <p>Estrutura pensada para explicar os serviços com clareza e conduzir o visitante para o orçamento pelo WhatsApp.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Serviços</div>
+            <h2 class="section-titulo">Soluções completas para<br><span class="verde">proteger sem perder o estilo</span></h2>
+            <p class="section-subtitulo">Instalações sob medida, com acabamento limpo e discreto, para casas, apartamentos, condomínios e empresas.</p>
+          </div>
+          <a href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." class="btn-primario" target="_blank" rel="noopener" style="flex-shrink:0;">
+            💬 Solicitar orçamento
+          </a>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-icon">🛡️</div>
+        <div class="servicos-grid">
+          <div class="servico-card fade-up">
+            <div class="servico-icon">🛡️</div>
             <h3>Redes de proteção</h3>
-            <p>Proteção para janelas, sacadas, varandas, escadas, áreas de lazer e locais com risco de queda.</p>
-            <div class="service-list">
-              <span>✓ Crianças, idosos e pets</span>
-              <span>✓ Ambientes residenciais e comerciais</span>
-              <span>✓ Acabamento discreto</span>
+            <p>Proteção para janelas, sacadas, varandas, escadas e áreas de risco de queda, garantindo segurança sem comprometer a vista.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Crianças</span>
+              <span class="servico-tag">Idosos</span>
+              <span class="servico-tag">Pets</span>
+              <span class="servico-tag">Residencial</span>
+              <span class="servico-tag">Comercial</span>
             </div>
-          </article>
+          </div>
 
-          <article class="service-card reveal">
-            <div class="service-icon">🦟</div>
+          <div class="servico-card fade-up">
+            <div class="servico-icon">🦟</div>
             <h3>Telas mosquiteiras</h3>
-            <p>Mais conforto contra mosquitos, pernilongos e insetos, preservando ventilação e luminosidade.</p>
-            <div class="service-list">
-              <span>✓ Janelas, portas e varandas</span>
-              <span>✓ Ideal para quartos e cozinhas</span>
-              <span>✓ Solução prática para o dia a dia</span>
+            <p>Mais conforto e tranquilidade sem abrir mão da ventilação e da luz natural. Ideal para quartos, cozinhas e varandas.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Janelas</span>
+              <span class="servico-tag">Portas</span>
+              <span class="servico-tag">Varandas</span>
+              <span class="servico-tag">Sem insetos</span>
             </div>
-          </article>
+          </div>
 
-          <article class="service-card reveal">
-            <div class="service-icon">🐱</div>
+          <div class="servico-card fade-up">
+            <div class="servico-icon">🐱</div>
             <h3>Gatil e proteção pet</h3>
-            <p>Soluções para quem deseja deixar gatos e pets mais seguros em apartamentos, casas e áreas externas.</p>
-            <div class="service-list">
-              <span>✓ Proteção para gatos</span>
-              <span>✓ Fechamento de áreas</span>
-              <span>✓ Mais liberdade com segurança</span>
+            <p>Seu gato com mais liberdade e segurança. Soluções para fechar áreas de apartamentos, casas e espaços externos.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Gatos</span>
+              <span class="servico-tag">Área externa</span>
+              <span class="servico-tag">Apartamento</span>
             </div>
-          </article>
+          </div>
 
-          <article class="service-card reveal">
-            <div class="service-icon">🏐</div>
+          <div class="servico-card fade-up">
+            <div class="servico-icon">🏐</div>
             <h3>Quadras e áreas esportivas</h3>
-            <p>Redes para contenção e proteção em quadras, áreas de lazer, condomínios, clubes e espaços esportivos.</p>
-            <div class="service-list">
-              <span>✓ Quadras e áreas abertas</span>
-              <span>✓ Proteção e contenção</span>
-              <span>✓ Medidas personalizadas</span>
+            <p>Redes de contenção e proteção para quadras, condomínios, clubes e espaços de lazer. Medidas personalizadas.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Quadras</span>
+              <span class="servico-tag">Condomínios</span>
+              <span class="servico-tag">Clubes</span>
             </div>
-          </article>
+          </div>
 
-          <article class="service-card reveal">
-            <div class="service-icon">☀️</div>
+          <div class="servico-card fade-up">
+            <div class="servico-icon">☀️</div>
             <h3>Insulfilm</h3>
-            <p>Mais privacidade, conforto térmico e proteção solar para vidros residenciais, comerciais e corporativos.</p>
-            <div class="service-list">
-              <span>✓ Vidros e fachadas</span>
-              <span>✓ Redução de luminosidade</span>
-              <span>✓ Visual moderno</span>
+            <p>Mais privacidade, conforto térmico e proteção solar para vidros residenciais, comerciais e fachadas corporativas.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Vidros</span>
+              <span class="servico-tag">Fachadas</span>
+              <span class="servico-tag">Privacidade</span>
+              <span class="servico-tag">Conforto solar</span>
             </div>
-          </article>
+          </div>
 
-          <article class="service-card reveal">
-            <div class="service-icon">🏢</div>
+          <div class="servico-card fade-up">
+            <div class="servico-icon">🏢</div>
             <h3>Condomínios e empresas</h3>
-            <p>Atendimento para residências, condomínios, comércios, escolas, clubes e empresas da região.</p>
-            <div class="service-list">
-              <span>✓ Orçamento consultivo</span>
-              <span>✓ Instalação planejada</span>
-              <span>✓ Atendimento profissional</span>
+            <p>Atendimento consultivo para residências, condomínios, comércios, escolas, clubes e empresas da região de Varginha.</p>
+            <div class="servico-tags">
+              <span class="servico-tag">Condomínio</span>
+              <span class="servico-tag">Escola</span>
+              <span class="servico-tag">Comércio</span>
+              <span class="servico-tag">Planejado</span>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container split">
-        <div class="photo-panel reveal"></div>
-        <div class="panel-copy reveal">
-          <h2>Segurança não precisa pesar no visual.</h2>
-          <p>A Protege Sempre trabalha com soluções discretas, sob medida e pensadas para manter a estética do imóvel. A ideia é simples: proteger melhor, com acabamento bonito e atendimento direto.</p>
-          <div class="benefits">
-            <div class="benefit">✅ Orçamento sem compromisso</div>
-            <div class="benefit">✅ Atendimento em Varginha e região</div>
-            <div class="benefit">✅ Instalação sob medida</div>
-            <div class="benefit">✅ Acabamento limpo e discreto</div>
           </div>
         </div>
       </div>
@@ -1104,144 +1509,328 @@
 
     <section id="galeria">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Galeria com visual de Instagram para destacar instalações reais.</h2>
-          <p>Suba as fotos na pasta <strong>img/galeria/</strong>. O layout já está pronto para exibir imagens reais com foco em conversão.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Galeria</div>
+            <h2 class="section-titulo">Instalações <span class="verde">reais,</span><br>resultado de verdade</h2>
+            <p class="section-subtitulo">Cada projeto é único. Veja como ficam as instalações na prática, discretas, limpas e com acabamento profissional.</p>
+          </div>
+          <a href="https://www.instagram.com/protege_sempre/" class="btn-secundario" target="_blank" rel="noopener" style="flex-shrink:0;">
+            📷 Ver no Instagram
+          </a>
         </div>
 
-        <div class="gallery-grid">
-          <article class="gallery-item featured reveal">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-01.jpg" alt="Rede de proteção instalada em janela ou sacada" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Redes de proteção</span><h3>Janelas, sacadas e varandas</h3><p>Segurança para família, crianças e pets.</p></div>
-          </article>
+        <div class="galeria-grid fade-up">
+          <div class="galeria-item">
+            <img src="img/galeria/rede-protecao-01.jpg" alt="Rede de proteção instalada em sacada" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="galeria-placeholder">
+              <div class="galeria-placeholder-icon">🛡️</div>
+              <strong>Redes de proteção</strong>
+              <span class="galeria-placeholder-text">Adicione a foto em img/galeria/rede-protecao-01.jpg</span>
+            </div>
+            <div class="galeria-overlay">
+              <div class="galeria-info">
+                <div class="galeria-categoria">Redes de proteção</div>
+                <h4>Janelas, sacadas e varandas</h4>
+              </div>
+            </div>
+          </div>
 
-          <article class="gallery-item reveal">
-            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-01.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Telas mosquiteiras</span><h3>Conforto contra insetos</h3><p>Mais ventilação com tranquilidade.</p></div>
-          </article>
+          <div class="galeria-item">
+            <img src="img/galeria/tela-mosquiteira-01.jpg" alt="Tela mosquiteira instalada" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="galeria-placeholder">
+              <div class="galeria-placeholder-icon">🦟</div>
+              <strong>Telas mosquiteiras</strong>
+              <span class="galeria-placeholder-text">Adicione em img/galeria/tela-mosquiteira-01.jpg</span>
+            </div>
+            <div class="galeria-overlay">
+              <div class="galeria-info">
+                <div class="galeria-categoria">Mosquiteiras</div>
+                <h4>Conforto e ventilação</h4>
+              </div>
+            </div>
+          </div>
 
-          <article class="gallery-item reveal">
-            <img class="gallery-photo" src="img/galeria/gatil-01.jpg" alt="Gatil ou proteção para gatos" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Gatil</span><h3>Proteção para gatos</h3><p>Mais liberdade com segurança.</p></div>
-          </article>
+          <div class="galeria-item">
+            <img src="img/galeria/gatil-01.jpg" alt="Gatil e proteção para gatos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="galeria-placeholder">
+              <div class="galeria-placeholder-icon">🐱</div>
+              <strong>Gatil e proteção pet</strong>
+              <span class="galeria-placeholder-text">Adicione em img/galeria/gatil-01.jpg</span>
+            </div>
+            <div class="galeria-overlay">
+              <div class="galeria-info">
+                <div class="galeria-categoria">Proteção pet</div>
+                <h4>Liberdade com segurança</h4>
+              </div>
+            </div>
+          </div>
 
-          <article class="gallery-item reveal">
-            <img class="gallery-photo" src="img/galeria/quadra-01.jpg" alt="Rede para quadra e área esportiva" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Quadras</span><h3>Contenção e proteção</h3><p>Para áreas esportivas e lazer.</p></div>
-          </article>
+          <div class="galeria-item">
+            <img src="img/galeria/quadra-01.jpg" alt="Rede para quadra esportiva" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="galeria-placeholder">
+              <div class="galeria-placeholder-icon">🏐</div>
+              <strong>Quadras esportivas</strong>
+              <span class="galeria-placeholder-text">Adicione em img/galeria/quadra-01.jpg</span>
+            </div>
+            <div class="galeria-overlay">
+              <div class="galeria-info">
+                <div class="galeria-categoria">Quadras</div>
+                <h4>Contenção e proteção</h4>
+              </div>
+            </div>
+          </div>
 
-          <article class="gallery-item reveal">
-            <img class="gallery-photo" src="img/galeria/insulfilm-01.jpg" alt="Insulfilm aplicado em vidro" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Insulfilm</span><h3>Privacidade e conforto solar</h3><p>Mais proteção para vidros e fachadas.</p></div>
-          </article>
+          <div class="galeria-item">
+            <img src="img/galeria/insulfilm-01.jpg" alt="Insulfilm em vidro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="galeria-placeholder">
+              <div class="galeria-placeholder-icon">☀️</div>
+              <strong>Insulfilm</strong>
+              <span class="galeria-placeholder-text">Adicione em img/galeria/insulfilm-01.jpg</span>
+            </div>
+            <div class="galeria-overlay">
+              <div class="galeria-info">
+                <div class="galeria-categoria">Insulfilm</div>
+                <h4>Privacidade e conforto</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="antes-depois">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Antes e depois para mostrar resultado de verdade.</h2>
-          <p>Essa seção foi criada para receber imagens reais e aumentar a confiança de quem está comparando orçamentos.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Antes e depois</div>
+            <h2 class="section-titulo">O resultado fala <span class="verde">por si só</span></h2>
+            <p class="section-subtitulo">Veja a diferença que uma instalação profissional faz: segurança e acabamento que valorizam o imóvel.</p>
+          </div>
         </div>
 
-        <div class="before-after">
-          <div class="ba-card before reveal"><div class="ba-label">Antes</div></div>
-          <div class="ba-card after reveal"><div class="ba-label">Depois protegido</div></div>
+        <div class="antes-depois-container fade-up">
+          <div class="antes-depois-card">
+            <img class="antes-depois-img" src="img/galeria/antes-01.jpg" alt="Antes da instalação" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="antes-depois-placeholder">
+              <div>📷</div>
+              <strong>Foto do antes</strong>
+              <span>Adicione em img/galeria/antes-01.jpg</span>
+            </div>
+            <div class="antes-depois-label label-antes">Antes</div>
+            <div class="antes-depois-desc">
+              <h4>Ambiente sem proteção</h4>
+              <p>Espaço aberto, com maior risco para crianças, idosos e pets.</p>
+            </div>
+          </div>
+
+          <div class="antes-depois-card">
+            <img class="antes-depois-img" src="img/galeria/depois-01.jpg" alt="Depois da instalação da rede de proteção" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="antes-depois-placeholder">
+              <div>🛡️</div>
+              <strong>Foto do depois</strong>
+              <span>Adicione em img/galeria/depois-01.jpg</span>
+            </div>
+            <div class="antes-depois-label label-depois">Depois</div>
+            <div class="antes-depois-desc">
+              <h4>Ambiente protegido</h4>
+              <p>Mais segurança, acabamento discreto e tranquilidade no dia a dia.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="processo">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Do primeiro contato à instalação, tudo simples e rápido.</h2>
-          <p>O visitante entende o processo e já sabe exatamente o que fazer para pedir orçamento.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Como funciona</div>
+            <h2 class="section-titulo">Do contato à instalação,<br><span class="verde">tudo simples e rápido</span></h2>
+            <p class="section-subtitulo">O atendimento é direto pelo WhatsApp para facilitar o orçamento e agilizar a instalação.</p>
+          </div>
         </div>
 
-        <div class="process">
-          <div class="step reveal"><h3>Contato</h3><p>Chame no WhatsApp e informe o tipo de serviço desejado.</p></div>
-          <div class="step reveal"><h3>Fotos e medidas</h3><p>Envie fotos do local ou combine uma avaliação técnica.</p></div>
-          <div class="step reveal"><h3>Orçamento</h3><p>Receba uma proposta clara, com serviço, prazo e orientação.</p></div>
-          <div class="step reveal"><h3>Instalação</h3><p>Equipe realiza o serviço com segurança e acabamento profissional.</p></div>
+        <div class="processo-steps">
+          <div class="processo-step fade-up">
+            <div class="processo-num">1</div>
+            <h3>Contato</h3>
+            <p>Você chama no WhatsApp e informa o serviço desejado.</p>
+          </div>
+          <div class="processo-step fade-up">
+            <div class="processo-num">2</div>
+            <h3>Fotos e medidas</h3>
+            <p>Envie fotos do local ou combine uma avaliação técnica.</p>
+          </div>
+          <div class="processo-step fade-up">
+            <div class="processo-num">3</div>
+            <h3>Orçamento</h3>
+            <p>Receba uma proposta clara, com orientação e prazo.</p>
+          </div>
+          <div class="processo-step fade-up">
+            <div class="processo-num">4</div>
+            <h3>Instalação</h3>
+            <p>Equipe realiza o serviço com cuidado e acabamento profissional.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="avaliacoes">
+    <section id="depoimentos">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Confiança também se constrói com boas experiências.</h2>
-          <p>Substitua estes depoimentos por avaliações reais de clientes para deixar a página ainda mais convincente.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Depoimentos</div>
+            <h2 class="section-titulo">Mais confiança para quem está<br><span class="verde">escolhendo agora</span></h2>
+            <p class="section-subtitulo">Substitua estes textos por avaliações reais dos clientes quando tiver os depoimentos oficiais.</p>
+          </div>
         </div>
 
-        <div class="reviews">
-          <article class="review reveal"><div class="stars">★★★★★</div><p>Atendimento rápido, instalação caprichada e acabamento muito discreto.</p><strong>Cliente Protege Sempre</strong></article>
-          <article class="review reveal"><div class="stars">★★★★★</div><p>Ficamos muito mais tranquilos com a proteção nas janelas e sacada.</p><strong>Cliente Protege Sempre</strong></article>
-          <article class="review reveal"><div class="stars">★★★★★</div><p>Serviço profissional, limpo e com ótima orientação desde o primeiro contato.</p><strong>Cliente Protege Sempre</strong></article>
+        <div class="depoimentos-grid">
+          <div class="depoimento-card fade-up">
+            <div class="depoimento-estrelas">★★★★★</div>
+            <p class="depoimento-texto">Atendimento rápido, serviço bem feito e acabamento muito discreto. Ficamos mais tranquilos em casa.</p>
+            <div class="depoimento-autor">
+              <div class="depoimento-avatar">P</div>
+              <div>
+                <div class="depoimento-autor-nome">Cliente Protege Sempre</div>
+                <div class="depoimento-autor-local">Varginha-MG</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="depoimento-card fade-up">
+            <div class="depoimento-estrelas">★★★★★</div>
+            <p class="depoimento-texto">A instalação ficou limpa e segura. Excelente para quem tem criança e pet em apartamento.</p>
+            <div class="depoimento-autor">
+              <div class="depoimento-avatar">S</div>
+              <div>
+                <div class="depoimento-autor-nome">Cliente Protege Sempre</div>
+                <div class="depoimento-autor-local">Varginha-MG</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="depoimento-card fade-up">
+            <div class="depoimento-estrelas">★★★★★</div>
+            <p class="depoimento-texto">Gostei da orientação no orçamento e do cuidado na instalação. Recomendo.</p>
+            <div class="depoimento-autor">
+              <div class="depoimento-avatar">M</div>
+              <div>
+                <div class="depoimento-autor-nome">Cliente Protege Sempre</div>
+                <div class="depoimento-autor-local">Varginha-MG</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="duvidas">
       <div class="container">
-        <div class="section-head reveal">
-          <h2>Dúvidas frequentes antes de pedir orçamento.</h2>
-          <p>Respostas curtas ajudam o cliente a decidir mais rápido e reduzem dúvidas repetidas no WhatsApp.</p>
+        <div class="section-header fade-up">
+          <div class="section-header-left">
+            <div class="section-tag">Dúvidas frequentes</div>
+            <h2 class="section-titulo">Perguntas que ajudam<br><span class="verde">na decisão</span></h2>
+            <p class="section-subtitulo">Respostas simples para reduzir dúvidas antes do contato pelo WhatsApp.</p>
+          </div>
         </div>
 
-        <div class="faq">
-          <details class="reveal">
-            <summary>Vocês atendem somente Varginha?</summary>
-            <p>O foco é atendimento em Varginha-MG e região. Para confirmar disponibilidade na sua cidade, chame pelo WhatsApp e informe o endereço ou bairro.</p>
-          </details>
-          <details class="reveal">
-            <summary>Consigo pedir orçamento por foto?</summary>
-            <p>Sim. Você pode enviar fotos do local, medidas aproximadas e o tipo de serviço desejado. Se necessário, é feita uma avaliação mais detalhada.</p>
-          </details>
-          <details class="reveal">
-            <summary>As redes servem para pets?</summary>
-            <p>Sim. A página foi pensada para destacar proteção para crianças, família e pets, incluindo soluções para gatos e áreas externas.</p>
-          </details>
-          <details class="reveal">
-            <summary>O site já aceita fotos reais?</summary>
-            <p>Sim. Basta subir as imagens na pasta img/galeria com os nomes usados no código, como rede-protecao-01.jpg, tela-mosquiteira-01.jpg, gatil-01.jpg, quadra-01.jpg e insulfilm-01.jpg.</p>
-          </details>
+        <div class="faq-grid">
+          <div class="faq-item fade-up">
+            <div class="faq-pergunta">
+              <span class="faq-pergunta-texto">Atendem somente Varginha?</span>
+              <span class="faq-icone">+</span>
+            </div>
+            <div class="faq-resposta">
+              <div class="faq-resposta-inner">O foco é Varginha-MG e região. Para confirmar disponibilidade na sua cidade ou bairro, chame no WhatsApp e informe o endereço.</div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up">
+            <div class="faq-pergunta">
+              <span class="faq-pergunta-texto">Dá para pedir orçamento por foto?</span>
+              <span class="faq-icone">+</span>
+            </div>
+            <div class="faq-resposta">
+              <div class="faq-resposta-inner">Sim. Você pode enviar fotos do local, medidas aproximadas e o tipo de serviço desejado. Se necessário, é feita uma avaliação técnica.</div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up">
+            <div class="faq-pergunta">
+              <span class="faq-pergunta-texto">As redes servem para pets?</span>
+              <span class="faq-icone">+</span>
+            </div>
+            <div class="faq-resposta">
+              <div class="faq-resposta-inner">Sim. Há soluções para crianças, idosos e pets, incluindo proteção para gatos, fechamento de áreas e sacadas.</div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up">
+            <div class="faq-pergunta">
+              <span class="faq-pergunta-texto">Como adiciono as fotos reais no site?</span>
+              <span class="faq-icone">+</span>
+            </div>
+            <div class="faq-resposta">
+              <div class="faq-resposta-inner">Suba as imagens na pasta img/galeria com os nomes usados no código: rede-protecao-01.jpg, tela-mosquiteira-01.jpg, gatil-01.jpg, quadra-01.jpg e insulfilm-01.jpg.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="orcamento">
       <div class="container">
-        <div class="cta reveal">
-          <div>
-            <h2>Proteja sua casa hoje mesmo.</h2>
-            <p>Solicite um orçamento sem compromisso pelo WhatsApp. Informe o serviço desejado, envie fotos do local e receba orientação para a melhor solução.</p>
+        <div class="orcamento-wrapper">
+          <div class="orcamento-left fade-up">
+            <div class="section-tag">Orçamento</div>
+            <h2 class="section-titulo">Solicite seu orçamento<br><span class="verde">sem compromisso</span></h2>
+            <p class="section-subtitulo">Preencha as informações e envie direto para o WhatsApp da Protege Sempre com a mensagem pronta.</p>
+
+            <div class="orcamento-beneficios">
+              <div class="orcamento-beneficio">
+                <span class="orcamento-beneficio-icon">📲</span>
+                <span class="orcamento-beneficio-texto">Atendimento direto pelo WhatsApp</span>
+              </div>
+              <div class="orcamento-beneficio">
+                <span class="orcamento-beneficio-icon">📷</span>
+                <span class="orcamento-beneficio-texto">Você pode enviar fotos do local</span>
+              </div>
+              <div class="orcamento-beneficio">
+                <span class="orcamento-beneficio-icon">✅</span>
+                <span class="orcamento-beneficio-texto">Orientação para escolher a melhor solução</span>
+              </div>
+            </div>
           </div>
 
-          <form class="quote-card" onsubmit="sendQuote(event)">
-            <label for="nome">Seu nome</label>
-            <input id="nome" name="nome" placeholder="Digite seu nome" required />
+          <form class="orcamento-form fade-up" onsubmit="enviarOrcamento(event)">
+            <h3>Enviar pedido pelo WhatsApp</h3>
+            <p class="orcamento-form-desc">A mensagem será montada automaticamente para agilizar o atendimento.</p>
 
-            <label for="servico">Serviço desejado</label>
-            <select id="servico" name="servico" required>
-              <option value="Rede de proteção">Rede de proteção</option>
-              <option value="Tela mosquiteira">Tela mosquiteira</option>
-              <option value="Gatil ou proteção para pets">Gatil ou proteção para pets</option>
-              <option value="Rede para quadra">Rede para quadra</option>
-              <option value="Insulfilm">Insulfilm</option>
-              <option value="Mais de um serviço">Mais de um serviço</option>
-            </select>
+            <div class="form-grupo">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required />
+            </div>
 
-            <label for="cidade">Cidade ou bairro</label>
-            <input id="cidade" name="cidade" placeholder="Ex: Varginha, Centro" />
+            <div class="form-grupo">
+              <label for="servico">Serviço desejado</label>
+              <select id="servico" name="servico" required>
+                <option value="Rede de proteção">Rede de proteção</option>
+                <option value="Tela mosquiteira">Tela mosquiteira</option>
+                <option value="Gatil ou proteção pet">Gatil ou proteção pet</option>
+                <option value="Rede para quadra">Rede para quadra</option>
+                <option value="Insulfilm">Insulfilm</option>
+                <option value="Mais de um serviço">Mais de um serviço</option>
+              </select>
+            </div>
 
-            <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+            <div class="form-grupo">
+              <label for="cidade">Cidade ou bairro</label>
+              <input id="cidade" name="cidade" type="text" placeholder="Ex: Varginha, Centro" />
+            </div>
+
+            <button type="submit" class="form-submit">💬 Enviar pelo WhatsApp</button>
           </form>
         </div>
       </div>
@@ -1249,42 +1838,116 @@
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>© <span id="year"></span> Protege Sempre. Todos os direitos reservados.</div>
-      <div>Varginha-MG e região • Redes • Mosquiteiras • Gatil • Quadras • Insulfilm</div>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">🛡️</div>
+            Protege<span>Sempre</span>
+          </div>
+          <p class="footer-brand-desc">
+            Redes de proteção, telas mosquiteiras, gatil, redes para quadras e insulfilm em Varginha-MG e região.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/protege_sempre/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-titulo">Serviços</h4>
+          <ul class="footer-col-links">
+            <li><a href="#servicos">Redes de proteção</a></li>
+            <li><a href="#servicos">Telas mosquiteiras</a></li>
+            <li><a href="#servicos">Gatil e proteção pet</a></li>
+            <li><a href="#servicos">Quadras e insulfilm</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-titulo">Contato</h4>
+          <ul class="footer-col-links">
+            <li><a href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/protege_sempre/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#orcamento">Pedir orçamento</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© <span id="ano"></span> Protege Sempre. Todos os direitos reservados.</div>
+        <div class="footer-services">Varginha-MG e região</div>
+      </div>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
-  <a class="sticky-mobile-cta" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">Pedir orçamento pelo WhatsApp</a>
+  <div class="float-wpp">
+    <div class="float-wpp-bubble">Fale conosco pelo WhatsApp</div>
+    <a class="float-wpp-btn" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener" aria-label="WhatsApp">
+      💬
+      <span class="float-wpp-ping"></span>
+    </a>
+  </div>
+
+  <a class="mobile-bottom-cta" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">
+    💬 Pedir orçamento pelo WhatsApp
+  </a>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const WHATSAPP = '553599936636';
 
-    function toggleMenu() {
-      document.getElementById('mobileDrawer').classList.toggle('open');
-    }
+    document.getElementById('ano').textContent = new Date().getFullYear();
 
-    function sendQuote(event) {
+    const navbar = document.getElementById('navbar');
+    const hamburguer = document.getElementById('hamburguer');
+    const navMobile = document.getElementById('navMobile');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    hamburguer.addEventListener('click', () => {
+      const aberto = navMobile.classList.toggle('ativo');
+      hamburguer.classList.toggle('ativo', aberto);
+      hamburguer.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+    });
+
+    navMobile.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('ativo');
+        hamburguer.classList.remove('ativo');
+        hamburguer.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.faq-pergunta').forEach((pergunta) => {
+      pergunta.addEventListener('click', () => {
+        pergunta.closest('.faq-item').classList.toggle('ativo');
+      });
+    });
+
+    function enviarOrcamento(event) {
       event.preventDefault();
 
       const nome = document.getElementById('nome').value.trim();
       const servico = document.getElementById('servico').value;
       const cidade = document.getElementById('cidade').value.trim();
 
-      const msg = `Olá! Meu nome é ${nome}. Quero um orçamento para ${servico}${cidade ? ' em ' + cidade : ''}.`;
-      const phone = '553599936636';
+      const texto = `Olá! Meu nome é ${nome}. Quero um orçamento para ${servico}${cidade ? ' em ' + cidade : ''}.`;
+      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
 
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(url, '_blank');
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach((item) => observer.observe(item));
   </script>
 </body>
 </html>
