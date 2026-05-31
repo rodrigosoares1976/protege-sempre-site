@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#f8fafc"/><path d="M32 7 51 16v14c0 13-8 23-19 27C21 53 13 43 13 30V16l19-9Z" fill="none" stroke="#075a95" stroke-width="5" stroke-linejoin="round"/><path d="M22 33h20M26 27h12M26 39h12" stroke="#4b8f42" stroke-width="4" stroke-linecap="round"/><path d="M32 17 20 28h4v16h16V28h4L32 17Z" fill="none" stroke="#075a95" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <image href="img/logo/protege-sempre-simbolo-512.png" width="512" height="512"/>
+</svg>
