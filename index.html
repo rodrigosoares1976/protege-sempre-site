@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Protege Sempre | Redes de Proteção, Telas Mosquiteiras e Insulfilm</title>
-  <meta name="description" content="Protege Sempre: redes de proteção, telas mosquiteiras e insulfilm com instalação profissional, acabamento moderno, garantia e atendimento pelo WhatsApp." />
+  <title>Protege Sempre | Redes de Proteção, Telas Mosquiteiras, Gatil e Insulfilm em Varginha</title>
+  <meta name="description" content="Protege Sempre em Varginha-MG e região. Instalação de redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm com acabamento profissional. Solicite orçamento pelo WhatsApp." />
+  <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, insulfilm Varginha, gatil Varginha, rede para sacada, rede para janela, proteção para pets, Protege Sempre" />
   <meta name="theme-color" content="#07111f" />
+  <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Protege Sempre | Segurança para quem você ama" />
-  <meta property="og:description" content="Redes de proteção, telas mosquiteiras e insulfilm com acabamento profissional." />
+  <meta property="og:title" content="Protege Sempre | Segurança para sua família, crianças e pets" />
+  <meta property="og:description" content="Redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm em Varginha-MG e região." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://protegesempre.com.br" />
+  <meta property="og:locale" content="pt_BR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +22,23 @@
 
   <style>
     :root {
-      --bg: #050914;
+      --bg: #040816;
       --bg2: #07111f;
+      --surface: #0b1628;
+      --surface2: #101f36;
       --text: #f8fafc;
       --muted: #cbd5e1;
       --soft: #94a3b8;
       --line: rgba(255,255,255,.14);
-      --glass: rgba(255,255,255,.08);
+      --glass: rgba(255,255,255,.075);
       --glass2: rgba(255,255,255,.13);
       --yellow: #fbbf24;
       --orange: #f97316;
       --green: #22c55e;
       --blue: #38bdf8;
-      --shadow: 0 30px 90px rgba(0,0,0,.36);
-      --radius: 30px;
+      --red: #ef4444;
+      --shadow: 0 32px 100px rgba(0,0,0,.42);
+      --radius: 32px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,30 +46,48 @@
     body {
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at 12% 8%, rgba(56,189,248,.24), transparent 28%),
-        radial-gradient(circle at 85% 14%, rgba(251,191,36,.22), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(34,197,94,.14), transparent 34%),
-        linear-gradient(180deg, #050914 0%, #07111f 45%, #020617 100%);
       min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 5%, rgba(56,189,248,.22), transparent 30%),
+        radial-gradient(circle at 88% 12%, rgba(251,191,36,.22), transparent 32%),
+        radial-gradient(circle at 50% 92%, rgba(34,197,94,.16), transparent 36%),
+        linear-gradient(180deg, #040816 0%, #07111f 44%, #020617 100%);
       overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 76%);
+      pointer-events: none;
     }
 
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
-    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(20px);
-      background: rgba(2, 6, 23, .72);
+      z-index: 80;
+      backdrop-filter: blur(22px);
+      background: rgba(2, 6, 23, .74);
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      height: 78px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,37 +95,55 @@
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-size: 1.12rem;
       font-weight: 900;
       letter-spacing: -.04em;
+      font-size: 1.12rem;
     }
 
-    .brand-icon {
+    .brand-mark {
       width: 46px;
       height: 46px;
-      border-radius: 17px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--yellow), var(--green));
       color: #07111f;
-      box-shadow: 0 16px 45px rgba(251,191,36,.28);
+      background: linear-gradient(135deg, var(--yellow), var(--green));
+      box-shadow: 0 18px 48px rgba(251,191,36,.28);
     }
 
-    .brand-icon svg { width: 25px; height: 25px; }
+    .brand-mark svg { width: 26px; height: 26px; }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
       color: var(--muted);
-      font-size: .94rem;
-      font-weight: 600;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: .2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -8px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--yellow), var(--green));
+      transition: .25s ease;
     }
 
     .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { right: 0; }
 
     .btn {
       min-height: 50px;
@@ -113,44 +155,71 @@
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.16);
       font-weight: 850;
-      transition: .25s ease;
       cursor: pointer;
+      transition: .25s ease;
       white-space: nowrap;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--yellow), var(--orange));
-      color: #111827;
       border: 0;
-      box-shadow: 0 18px 45px rgba(249,115,22,.34);
+      color: #111827;
+      background: linear-gradient(135deg, var(--yellow), var(--orange));
+      box-shadow: 0 18px 46px rgba(249,115,22,.34);
     }
 
-    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .btn-ghost { background: rgba(255,255,255,.08); color: #fff; }
-    .btn-ghost:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+    .btn-primary:hover,
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      color: #fff;
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-green {
+      border: 0;
+      background: linear-gradient(135deg, #22c55e, #86efac);
+      color: #052e16;
+      box-shadow: 0 18px 48px rgba(34,197,94,.28);
+    }
+
+    .mobile-menu {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid var(--line);
+      padding: 12px 0 18px;
+    }
+
+    .mobile-drawer a {
+      display: block;
+      padding: 13px 0;
+      color: var(--muted);
+      font-weight: 750;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
 
     .hero {
       position: relative;
-      padding: 84px 0 62px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, #000, transparent 72%);
-      pointer-events: none;
+      padding: 82px 0 46px;
     }
 
     .hero-grid {
-      position: relative;
       display: grid;
       grid-template-columns: 1fr .94fr;
-      gap: 46px;
+      gap: 48px;
       align-items: center;
     }
 
@@ -163,9 +232,9 @@
       background: rgba(255,255,255,.08);
       border: 1px solid var(--line);
       color: var(--muted);
-      font-weight: 750;
+      font-weight: 800;
       margin-bottom: 22px;
-      font-size: .92rem;
+      font-size: .9rem;
     }
 
     .pulse {
@@ -177,9 +246,9 @@
     }
 
     h1 {
-      font-size: clamp(3rem, 6vw, 6.6rem);
+      font-size: clamp(3rem, 6.2vw, 6.8rem);
       line-height: .88;
-      letter-spacing: -.085em;
+      letter-spacing: -.088em;
       margin-bottom: 26px;
     }
 
@@ -191,7 +260,7 @@
     }
 
     .hero-text {
-      max-width: 640px;
+      max-width: 650px;
       color: var(--muted);
       line-height: 1.75;
       font-size: clamp(1.08rem, 1.55vw, 1.28rem);
@@ -200,15 +269,16 @@
 
     .hero-actions {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      gap: 14px;
+      margin-bottom: 28px;
     }
 
     .trust-strip {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 10px;
+      max-width: 740px;
     }
 
     .trust-pill {
@@ -217,14 +287,14 @@
       background: rgba(255,255,255,.07);
       border: 1px solid var(--line);
       color: var(--muted);
-      font-size: .86rem;
-      font-weight: 700;
+      font-size: .84rem;
+      font-weight: 760;
     }
 
     .showcase {
       position: relative;
-      min-height: 610px;
-      border-radius: 44px;
+      min-height: 620px;
+      border-radius: 46px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,.17);
       background:
@@ -232,54 +302,57 @@
         radial-gradient(circle at 26% 22%, rgba(56,189,248,.32), transparent 28%),
         radial-gradient(circle at 78% 70%, rgba(251,191,36,.28), transparent 32%);
       box-shadow: var(--shadow);
+      isolation: isolate;
     }
 
     .showcase::before {
       content: "";
       position: absolute;
-      inset: -80px;
+      inset: -90px;
       background:
-        linear-gradient(120deg, transparent 0 47%, rgba(255,255,255,.16) 48% 52%, transparent 53% 100%),
+        linear-gradient(120deg, transparent 0 47%, rgba(255,255,255,.18) 48% 52%, transparent 53% 100%),
         repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 27px),
         repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 27px);
       transform: rotate(-8deg);
+      z-index: -1;
     }
 
-    .mock-photo {
+    .showcase-photo {
       position: absolute;
-      inset: 48px 42px 110px;
-      border-radius: 32px;
+      inset: 46px 42px 118px;
+      border-radius: 34px;
       overflow: hidden;
       border: 12px solid rgba(226,232,240,.9);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,.2), 0 28px 70px rgba(0,0,0,.34);
       background:
         linear-gradient(135deg, rgba(14,165,233,.34), rgba(15,23,42,.12)),
         radial-gradient(circle at 30% 20%, rgba(255,255,255,.54), transparent 22%);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.2), 0 28px 70px rgba(0,0,0,.34);
     }
 
-    .mock-photo::before,
-    .mock-photo::after {
+    .showcase-photo::before,
+    .showcase-photo::after {
       content: "";
       position: absolute;
       background: rgba(226,232,240,.92);
-      z-index: 1;
+      z-index: 2;
     }
 
-    .mock-photo::before { width: 12px; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
-    .mock-photo::after { height: 12px; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
+    .showcase-photo::before { width: 12px; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
+    .showcase-photo::after { height: 12px; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
 
-    .net {
+    .showcase-net {
       position: absolute;
       inset: 0;
+      z-index: 1;
       background:
-        repeating-linear-gradient(45deg, rgba(255,255,255,.2) 0 1px, transparent 1px 12px),
+        repeating-linear-gradient(45deg, rgba(255,255,255,.22) 0 1px, transparent 1px 12px),
         repeating-linear-gradient(-45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 12px);
-      opacity: .7;
+      opacity: .82;
     }
 
     .float-card {
       position: absolute;
-      z-index: 3;
+      z-index: 4;
       padding: 17px 19px;
       border-radius: 24px;
       background: rgba(2, 6, 23, .78);
@@ -291,8 +364,33 @@
     .float-card strong { display: block; margin-bottom: 3px; }
     .float-card span { color: var(--soft); font-size: .86rem; }
     .f1 { top: 30px; right: 24px; }
-    .f2 { bottom: 32px; left: 22px; }
-    .f3 { right: 28px; bottom: 150px; }
+    .f2 { bottom: 34px; left: 22px; }
+    .f3 { right: 28px; bottom: 152px; }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .mini-stat {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.075);
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.72rem;
+      letter-spacing: -.05em;
+    }
+
+    .mini-stat span {
+      color: var(--soft);
+      font-size: .9rem;
+    }
 
     section { padding: 76px 0; }
 
@@ -305,26 +403,26 @@
     }
 
     .section-head h2 {
-      max-width: 760px;
-      font-size: clamp(2rem, 3.7vw, 3.8rem);
+      max-width: 790px;
+      font-size: clamp(2rem, 3.8vw, 3.9rem);
       line-height: .98;
-      letter-spacing: -.065em;
+      letter-spacing: -.067em;
     }
 
     .section-head p {
-      max-width: 450px;
+      max-width: 460px;
       color: var(--muted);
       line-height: 1.7;
     }
 
-    .cards {
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .card {
-      min-height: 285px;
+    .service-card {
+      min-height: 308px;
       padding: 30px;
       border-radius: var(--radius);
       background: var(--glass);
@@ -334,56 +432,70 @@
       overflow: hidden;
     }
 
-    .card::before {
+    .service-card::before {
       content: "";
       position: absolute;
-      inset: auto -20% -50% -20%;
-      height: 130px;
-      background: radial-gradient(circle, rgba(251,191,36,.2), transparent 62%);
+      inset: auto -20% -44% -20%;
+      height: 150px;
+      background: radial-gradient(circle, rgba(251,191,36,.22), transparent 62%);
       opacity: 0;
       transition: .25s ease;
     }
 
-    .card:hover {
+    .service-card:hover {
       transform: translateY(-6px);
       background: var(--glass2);
     }
 
-    .card:hover::before { opacity: 1; }
+    .service-card:hover::before { opacity: 1; }
 
-    .icon {
-      width: 56px;
-      height: 56px;
+    .service-icon {
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
-      border-radius: 20px;
+      border-radius: 21px;
       margin-bottom: 20px;
       background: linear-gradient(135deg, rgba(251,191,36,.24), rgba(34,197,94,.18));
       border: 1px solid rgba(255,255,255,.16);
-      font-size: 1.35rem;
+      font-size: 1.38rem;
     }
 
-    .card h3 {
-      font-size: 1.38rem;
+    .service-card h3 {
+      font-size: 1.42rem;
       letter-spacing: -.035em;
       margin-bottom: 12px;
     }
 
-    .card p {
+    .service-card p {
       color: var(--muted);
       line-height: 1.68;
+      margin-bottom: 18px;
     }
 
-    .emotion {
+    .service-list {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      gap: 8px;
+      color: var(--soft);
+      font-size: .92rem;
+    }
+
+    .service-list span {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
       gap: 20px;
       align-items: stretch;
     }
 
-    .emotion-visual {
-      border-radius: 38px;
-      min-height: 420px;
+    .photo-panel {
+      min-height: 460px;
+      border-radius: 40px;
       border: 1px solid var(--line);
       background:
         linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
@@ -393,32 +505,32 @@
       box-shadow: var(--shadow);
     }
 
-    .emotion-visual::after {
+    .photo-panel::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, transparent 20%, rgba(2,6,23,.9) 100%),
+        linear-gradient(180deg, transparent 20%, rgba(2,6,23,.92) 100%),
         repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 1px, transparent 1px 12px);
     }
 
-    .emotion-copy {
-      border-radius: 38px;
-      padding: 42px;
+    .panel-copy {
+      border-radius: 40px;
+      padding: 44px;
       border: 1px solid var(--line);
       background:
         radial-gradient(circle at top right, rgba(34,197,94,.2), transparent 28%),
         rgba(255,255,255,.08);
     }
 
-    .emotion-copy h2 {
-      font-size: clamp(2rem, 4vw, 4rem);
-      letter-spacing: -.065em;
+    .panel-copy h2 {
+      font-size: clamp(2rem, 4vw, 4.05rem);
+      letter-spacing: -.067em;
       line-height: .98;
       margin-bottom: 18px;
     }
 
-    .emotion-copy p {
+    .panel-copy p {
       color: var(--muted);
       line-height: 1.75;
       font-size: 1.08rem;
@@ -432,25 +544,25 @@
     }
 
     .benefit {
-      padding: 14px;
-      border-radius: 18px;
+      padding: 15px;
+      border-radius: 19px;
       background: rgba(255,255,255,.07);
       border: 1px solid var(--line);
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 760;
     }
 
     .gallery-grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr .8fr;
-      grid-auto-rows: 250px;
+      grid-auto-rows: 260px;
       gap: 18px;
     }
 
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 32px;
+      border-radius: 34px;
       border: 1px solid rgba(255,255,255,.16);
       background:
         linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
@@ -478,13 +590,13 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 18%, rgba(2,6,23,.88) 100%);
+      background: linear-gradient(180deg, transparent 18%, rgba(2,6,23,.90) 100%);
     }
 
     .gallery-fallback {
       position: absolute;
-      inset: 20px 20px 84px;
-      border-radius: 24px;
+      inset: 20px 20px 86px;
+      border-radius: 26px;
       border: 10px solid rgba(226,232,240,.88);
       background:
         repeating-linear-gradient(45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px),
@@ -511,7 +623,7 @@
     }
 
     .gallery-content h3 {
-      font-size: 1.24rem;
+      font-size: 1.25rem;
       letter-spacing: -.04em;
       margin-bottom: 5px;
     }
@@ -529,8 +641,8 @@
     }
 
     .ba-card {
-      min-height: 360px;
-      border-radius: 36px;
+      min-height: 380px;
+      border-radius: 38px;
       overflow: hidden;
       border: 1px solid var(--line);
       position: relative;
@@ -542,7 +654,7 @@
       content: "";
       position: absolute;
       inset: 30px;
-      border-radius: 26px;
+      border-radius: 28px;
       border: 10px solid rgba(226,232,240,.86);
       background:
         linear-gradient(135deg, rgba(56,189,248,.22), rgba(255,255,255,.08)),
@@ -577,8 +689,8 @@
     }
 
     .step {
-      padding: 28px;
-      border-radius: 28px;
+      padding: 29px;
+      border-radius: 30px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.075);
       position: relative;
@@ -606,9 +718,9 @@
     }
 
     .review {
-      padding: 28px;
-      min-height: 230px;
-      border-radius: 30px;
+      padding: 29px;
+      min-height: 235px;
+      border-radius: 32px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.075);
     }
@@ -617,9 +729,35 @@
     .review p { color: var(--muted); line-height: 1.68; margin-bottom: 18px; }
     .review strong { display: block; }
 
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.075);
+      border-radius: 22px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    details p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 12px;
+    }
+
     .cta {
-      border-radius: 44px;
-      padding: 48px;
+      border-radius: 46px;
+      padding: 50px;
       background:
         radial-gradient(circle at top right, rgba(34,197,94,.24), transparent 32%),
         radial-gradient(circle at bottom left, rgba(251,191,36,.18), transparent 30%),
@@ -633,9 +771,9 @@
     }
 
     .cta h2 {
-      font-size: clamp(2.15rem, 4.2vw, 4.2rem);
+      font-size: clamp(2.15rem, 4.2vw, 4.3rem);
       line-height: .95;
-      letter-spacing: -.065em;
+      letter-spacing: -.067em;
       margin-bottom: 18px;
     }
 
@@ -689,7 +827,7 @@
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 60;
+      z-index: 90;
       width: 62px;
       height: 62px;
       border-radius: 50%;
@@ -702,15 +840,45 @@
       font-weight: 950;
     }
 
-    @media (max-width: 980px) {
+    .sticky-mobile-cta {
+      display: none;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 89;
+      border-radius: 999px;
+      min-height: 56px;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #052e16;
+      background: linear-gradient(135deg, #22c55e, #86efac);
+      box-shadow: 0 18px 48px rgba(34,197,94,.28);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1020px) {
       .nav-links { display: none; }
+      .mobile-menu { display: grid; place-items: center; }
+      .mobile-drawer.open { display: block; }
       .hero { padding-top: 54px; }
       .hero-grid,
-      .emotion,
+      .split,
       .cta { grid-template-columns: 1fr; }
-      .showcase { min-height: 500px; }
+      .showcase { min-height: 510px; }
       .trust-strip { grid-template-columns: repeat(2, 1fr); }
-      .cards,
+      .service-grid,
       .reviews { grid-template-columns: 1fr; }
       .process,
       .gallery-grid,
@@ -718,40 +886,63 @@
       .gallery-item.featured { grid-row: span 1; }
       .section-head { display: block; }
       .section-head p { margin-top: 16px; }
+      .mini-stats { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 680px) {
       .container { width: min(100% - 24px, 1180px); }
-      .nav { height: 70px; }
+      .nav { min-height: 70px; }
       .brand { font-size: 1rem; }
-      .brand-icon { width: 40px; height: 40px; border-radius: 14px; }
-      .hero-actions .btn, .nav .btn { width: 100%; }
-      .nav { align-items: center; }
-      .nav .btn { display: none; }
+      .brand-mark { width: 40px; height: 40px; border-radius: 14px; }
+      .nav > .btn { display: none; }
+      .hero-actions .btn { width: 100%; }
       .trust-strip,
       .process,
       .gallery-grid,
       .before-after,
-      .benefits { grid-template-columns: 1fr; }
-      .gallery-grid { grid-auto-rows: 270px; }
-      .showcase { min-height: 420px; border-radius: 30px; }
-      .mock-photo { inset: 52px 24px 92px; border-width: 9px; }
+      .benefits,
+      .mini-stats { grid-template-columns: 1fr; }
+      .gallery-grid { grid-auto-rows: 280px; }
+      .showcase { min-height: 430px; border-radius: 32px; }
+      .showcase-photo { inset: 52px 24px 98px; border-width: 9px; }
       .float-card { padding: 12px 14px; border-radius: 18px; }
       .f1 { top: 16px; right: 12px; }
       .f2 { left: 12px; bottom: 18px; }
-      .f3 { right: 12px; bottom: 112px; }
-      .emotion-copy,
-      .cta { padding: 28px; border-radius: 30px; }
-      section { padding: 50px 0; }
+      .f3 { right: 12px; bottom: 118px; }
+      .panel-copy,
+      .cta { padding: 28px; border-radius: 32px; }
+      .photo-panel { min-height: 340px; }
+      section { padding: 52px 0; }
+      .whatsapp-float { display: none; }
+      .sticky-mobile-cta { display: flex; }
+      body { padding-bottom: 78px; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Protege Sempre",
+    "url": "https://protegesempre.com.br",
+    "telephone": "+553599936636",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Varginha",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Varginha-MG e região",
+    "description": "Instalação de redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm."
+  }
+  </script>
 </head>
 
 <body>
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Protege Sempre">
-        <span class="brand-icon" aria-hidden="true">
+        <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.7-2.9 8.7-7 10-4.1-1.3-7-5.3-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M8.5 12.2l2.1 2.1 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
         Protege Sempre
@@ -761,21 +952,32 @@
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
         <a href="#antes-depois">Antes e depois</a>
-        <a href="#avaliacoes">Avaliações</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
         <a href="#orcamento">Orçamento</a>
       </nav>
 
       <a class="btn btn-primary" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="mobile-menu" type="button" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div class="container mobile-drawer" id="mobileDrawer">
+      <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+      <a href="#galeria" onclick="toggleMenu()">Galeria</a>
+      <a href="#antes-depois" onclick="toggleMenu()">Antes e depois</a>
+      <a href="#processo" onclick="toggleMenu()">Como funciona</a>
+      <a href="#duvidas" onclick="toggleMenu()">Dúvidas</a>
+      <a href="#orcamento" onclick="toggleMenu()">Orçamento</a>
     </div>
   </header>
 
   <main id="inicio">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <div class="eyebrow"><span class="pulse"></span> Redes de proteção, telas mosquiteiras e insulfilm</div>
-          <h1>Proteção invisível. <span class="gradient-text">Segurança para quem você ama.</span></h1>
-          <p class="hero-text">Soluções sob medida para janelas, sacadas, varandas e ambientes comerciais, com instalação profissional, acabamento elegante e atendimento rápido pelo WhatsApp.</p>
+        <div class="reveal">
+          <div class="eyebrow"><span class="pulse"></span> Atendimento em Varginha-MG e região</div>
+          <h1>Proteja sua família, <span class="gradient-text">crianças e pets.</span></h1>
+          <p class="hero-text">Redes de proteção, telas mosquiteiras, gatil, quadras e insulfilm com acabamento profissional, visual discreto e orçamento sem compromisso pelo WhatsApp.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#orcamento">Solicitar orçamento</a>
@@ -783,61 +985,118 @@
           </div>
 
           <div class="trust-strip">
-            <div class="trust-pill">⭐ Atendimento rápido</div>
-            <div class="trust-pill">🛡️ Garantia</div>
-            <div class="trust-pill">📄 Nota fiscal</div>
-            <div class="trust-pill">🏠 Acabamento premium</div>
-            <div class="trust-pill">🐾 Crianças e pets</div>
+            <div class="trust-pill">🛡️ Redes sob medida</div>
+            <div class="trust-pill">🐾 Proteção para pets</div>
+            <div class="trust-pill">🦟 Conforto sem insetos</div>
+            <div class="trust-pill">☀️ Insulfilm residencial</div>
+            <div class="trust-pill">📲 Orçamento rápido</div>
           </div>
         </div>
 
-        <div class="showcase" aria-label="Janela com rede de proteção">
-          <div class="mock-photo"><div class="net"></div></div>
-          <div class="float-card f1"><strong>Proteção sob medida</strong><span>Janelas, sacadas e varandas</span></div>
-          <div class="float-card f2"><strong>Instalação profissional</strong><span>Acabamento limpo e discreto</span></div>
-          <div class="float-card f3"><strong>Mais tranquilidade</strong><span>Para sua família e seus pets</span></div>
+        <div class="showcase reveal" aria-label="Janela com rede de proteção">
+          <div class="showcase-photo"><div class="showcase-net"></div></div>
+          <div class="float-card f1"><strong>Segurança planejada</strong><span>Janelas, sacadas e varandas</span></div>
+          <div class="float-card f2"><strong>Acabamento profissional</strong><span>Instalação limpa e discreta</span></div>
+          <div class="float-card f3"><strong>Mais tranquilidade</strong><span>Para casa, empresa e condomínio</span></div>
         </div>
+      </div>
+
+      <div class="container mini-stats">
+        <div class="mini-stat reveal"><strong>VGA</strong><span>Varginha e região</span></div>
+        <div class="mini-stat reveal"><strong>5+</strong><span>tipos de solução</span></div>
+        <div class="mini-stat reveal"><strong>100%</strong><span>sob medida</span></div>
+        <div class="mini-stat reveal"><strong>Whats</strong><span>atendimento direto</span></div>
       </div>
     </section>
 
     <section id="servicos">
       <div class="container">
-        <div class="section-head">
-          <h2>Soluções completas para deixar seu ambiente mais seguro e confortável.</h2>
-          <p>Um atendimento direto, visual moderno e comunicação focada em confiança, acabamento e resultado.</p>
+        <div class="section-head reveal">
+          <h2>Soluções completas para proteger sua casa sem perder a beleza do ambiente.</h2>
+          <p>Estrutura pensada para explicar os serviços com clareza e conduzir o visitante para o orçamento pelo WhatsApp.</p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🛡️</div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">🛡️</div>
             <h3>Redes de proteção</h3>
-            <p>Instalação em janelas, sacadas, varandas e áreas de risco, ideal para crianças, pets e ambientes em altura.</p>
+            <p>Proteção para janelas, sacadas, varandas, escadas, áreas de lazer e locais com risco de queda.</p>
+            <div class="service-list">
+              <span>✓ Crianças, idosos e pets</span>
+              <span>✓ Ambientes residenciais e comerciais</span>
+              <span>✓ Acabamento discreto</span>
+            </div>
           </article>
-          <article class="card">
-            <div class="icon">🦟</div>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🦟</div>
             <h3>Telas mosquiteiras</h3>
-            <p>Mais conforto contra mosquitos e insetos, mantendo a ventilação natural e o visual leve do ambiente.</p>
+            <p>Mais conforto contra mosquitos, pernilongos e insetos, preservando ventilação e luminosidade.</p>
+            <div class="service-list">
+              <span>✓ Janelas, portas e varandas</span>
+              <span>✓ Ideal para quartos e cozinhas</span>
+              <span>✓ Solução prática para o dia a dia</span>
+            </div>
           </article>
-          <article class="card">
-            <div class="icon">☀️</div>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🐱</div>
+            <h3>Gatil e proteção pet</h3>
+            <p>Soluções para quem deseja deixar gatos e pets mais seguros em apartamentos, casas e áreas externas.</p>
+            <div class="service-list">
+              <span>✓ Proteção para gatos</span>
+              <span>✓ Fechamento de áreas</span>
+              <span>✓ Mais liberdade com segurança</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🏐</div>
+            <h3>Quadras e áreas esportivas</h3>
+            <p>Redes para contenção e proteção em quadras, áreas de lazer, condomínios, clubes e espaços esportivos.</p>
+            <div class="service-list">
+              <span>✓ Quadras e áreas abertas</span>
+              <span>✓ Proteção e contenção</span>
+              <span>✓ Medidas personalizadas</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">☀️</div>
             <h3>Insulfilm</h3>
-            <p>Privacidade, conforto térmico e proteção solar para vidros residenciais, comerciais e corporativos.</p>
+            <p>Mais privacidade, conforto térmico e proteção solar para vidros residenciais, comerciais e corporativos.</p>
+            <div class="service-list">
+              <span>✓ Vidros e fachadas</span>
+              <span>✓ Redução de luminosidade</span>
+              <span>✓ Visual moderno</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🏢</div>
+            <h3>Condomínios e empresas</h3>
+            <p>Atendimento para residências, condomínios, comércios, escolas, clubes e empresas da região.</p>
+            <div class="service-list">
+              <span>✓ Orçamento consultivo</span>
+              <span>✓ Instalação planejada</span>
+              <span>✓ Atendimento profissional</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="container emotion">
-        <div class="emotion-visual"></div>
-        <div class="emotion-copy">
-          <h2>Mais tranquilidade para sua família. Mais conforto para sua casa.</h2>
-          <p>A Protege Sempre une segurança, estética e instalação cuidadosa para proteger os ambientes sem comprometer a beleza do imóvel.</p>
+      <div class="container split">
+        <div class="photo-panel reveal"></div>
+        <div class="panel-copy reveal">
+          <h2>Segurança não precisa pesar no visual.</h2>
+          <p>A Protege Sempre trabalha com soluções discretas, sob medida e pensadas para manter a estética do imóvel. A ideia é simples: proteger melhor, com acabamento bonito e atendimento direto.</p>
           <div class="benefits">
-            <div class="benefit">✅ Medição sob medida</div>
-            <div class="benefit">✅ Acabamento discreto</div>
-            <div class="benefit">✅ Atendimento pelo WhatsApp</div>
-            <div class="benefit">✅ Solução para cada ambiente</div>
+            <div class="benefit">✅ Orçamento sem compromisso</div>
+            <div class="benefit">✅ Atendimento em Varginha e região</div>
+            <div class="benefit">✅ Instalação sob medida</div>
+            <div class="benefit">✅ Acabamento limpo e discreto</div>
           </div>
         </div>
       </div>
@@ -845,40 +1104,40 @@
 
     <section id="galeria">
       <div class="container">
-        <div class="section-head">
-          <h2>Galeria estilo Instagram para mostrar instalações reais.</h2>
-          <p>Suba as fotos na pasta <strong>img/galeria/</strong> com os nomes indicados para substituir os blocos automaticamente.</p>
+        <div class="section-head reveal">
+          <h2>Galeria com visual de Instagram para destacar instalações reais.</h2>
+          <p>Suba as fotos na pasta <strong>img/galeria/</strong>. O layout já está pronto para exibir imagens reais com foco em conversão.</p>
         </div>
 
         <div class="gallery-grid">
-          <article class="gallery-item featured">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-01.jpg" alt="Rede de proteção instalada" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <article class="gallery-item featured reveal">
+            <img class="gallery-photo" src="img/galeria/rede-protecao-01.jpg" alt="Rede de proteção instalada em janela ou sacada" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Rede de proteção</span><h3>Segurança para janelas e sacadas</h3><p>Proteção discreta para o dia a dia.</p></div>
+            <div class="gallery-content"><span class="gallery-tag">Redes de proteção</span><h3>Janelas, sacadas e varandas</h3><p>Segurança para família, crianças e pets.</p></div>
           </article>
 
-          <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/acabamento-01.jpg" alt="Acabamento da instalação" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <article class="gallery-item reveal">
+            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-01.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Acabamento</span><h3>Visual limpo e profissional</h3><p>Instalação pensada nos detalhes.</p></div>
+            <div class="gallery-content"><span class="gallery-tag">Telas mosquiteiras</span><h3>Conforto contra insetos</h3><p>Mais ventilação com tranquilidade.</p></div>
           </article>
 
-          <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-01.jpg" alt="Tela mosquiteira instalada" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <article class="gallery-item reveal">
+            <img class="gallery-photo" src="img/galeria/gatil-01.jpg" alt="Gatil ou proteção para gatos" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Tela mosquiteira</span><h3>Conforto contra insetos</h3><p>Mais ventilação com tranquilidade.</p></div>
+            <div class="gallery-content"><span class="gallery-tag">Gatil</span><h3>Proteção para gatos</h3><p>Mais liberdade com segurança.</p></div>
           </article>
 
-          <article class="gallery-item">
+          <article class="gallery-item reveal">
+            <img class="gallery-photo" src="img/galeria/quadra-01.jpg" alt="Rede para quadra e área esportiva" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content"><span class="gallery-tag">Quadras</span><h3>Contenção e proteção</h3><p>Para áreas esportivas e lazer.</p></div>
+          </article>
+
+          <article class="gallery-item reveal">
             <img class="gallery-photo" src="img/galeria/insulfilm-01.jpg" alt="Insulfilm aplicado em vidro" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div class="gallery-fallback" style="display:none"></div>
             <div class="gallery-content"><span class="gallery-tag">Insulfilm</span><h3>Privacidade e conforto solar</h3><p>Mais proteção para vidros e fachadas.</p></div>
-          </article>
-
-          <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/antes-depois-01.jpg" alt="Antes e depois de instalação" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="gallery-fallback" style="display:none"></div>
-            <div class="gallery-content"><span class="gallery-tag">Antes e depois</span><h3>Ambientes mais seguros</h3><p>Resultado sob medida para cada espaço.</p></div>
           </article>
         </div>
       </div>
@@ -886,55 +1145,83 @@
 
     <section id="antes-depois">
       <div class="container">
-        <div class="section-head">
-          <h2>Antes e depois que valoriza o resultado.</h2>
-          <p>Espaço preparado para receber imagens reais comparando o ambiente antes e depois da instalação.</p>
+        <div class="section-head reveal">
+          <h2>Antes e depois para mostrar resultado de verdade.</h2>
+          <p>Essa seção foi criada para receber imagens reais e aumentar a confiança de quem está comparando orçamentos.</p>
         </div>
 
         <div class="before-after">
-          <div class="ba-card before"><div class="ba-label">Antes</div></div>
-          <div class="ba-card after"><div class="ba-label">Depois protegido</div></div>
+          <div class="ba-card before reveal"><div class="ba-label">Antes</div></div>
+          <div class="ba-card after reveal"><div class="ba-label">Depois protegido</div></div>
         </div>
       </div>
     </section>
 
     <section id="processo">
       <div class="container">
-        <div class="section-head">
-          <h2>Do orçamento à instalação, tudo simples.</h2>
-          <p>Uma jornada objetiva ajuda o visitante a entender o processo e chamar no WhatsApp com segurança.</p>
+        <div class="section-head reveal">
+          <h2>Do primeiro contato à instalação, tudo simples e rápido.</h2>
+          <p>O visitante entende o processo e já sabe exatamente o que fazer para pedir orçamento.</p>
         </div>
 
         <div class="process">
-          <div class="step"><h3>Contato</h3><p>O cliente chama no WhatsApp e informa o tipo de ambiente.</p></div>
-          <div class="step"><h3>Fotos e medidas</h3><p>A equipe solicita fotos, medidas ou agenda avaliação.</p></div>
-          <div class="step"><h3>Orçamento</h3><p>Proposta clara com serviço, prazo e condições.</p></div>
-          <div class="step"><h3>Instalação</h3><p>Execução cuidadosa com acabamento profissional.</p></div>
+          <div class="step reveal"><h3>Contato</h3><p>Chame no WhatsApp e informe o tipo de serviço desejado.</p></div>
+          <div class="step reveal"><h3>Fotos e medidas</h3><p>Envie fotos do local ou combine uma avaliação técnica.</p></div>
+          <div class="step reveal"><h3>Orçamento</h3><p>Receba uma proposta clara, com serviço, prazo e orientação.</p></div>
+          <div class="step reveal"><h3>Instalação</h3><p>Equipe realiza o serviço com segurança e acabamento profissional.</p></div>
         </div>
       </div>
     </section>
 
     <section id="avaliacoes">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Confiança também se constrói com boas experiências.</h2>
-          <p>Substitua estes depoimentos por avaliações reais de clientes para aumentar a conversão.</p>
+          <p>Substitua estes depoimentos por avaliações reais de clientes para deixar a página ainda mais convincente.</p>
         </div>
 
         <div class="reviews">
-          <article class="review"><div class="stars">★★★★★</div><p>Atendimento rápido, instalação caprichada e acabamento muito discreto.</p><strong>Cliente Protege Sempre</strong></article>
-          <article class="review"><div class="stars">★★★★★</div><p>Ficamos muito mais tranquilos com a proteção nas janelas e sacada.</p><strong>Cliente Protege Sempre</strong></article>
-          <article class="review"><div class="stars">★★★★★</div><p>Serviço profissional, limpo e com ótima orientação desde o primeiro contato.</p><strong>Cliente Protege Sempre</strong></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><p>Atendimento rápido, instalação caprichada e acabamento muito discreto.</p><strong>Cliente Protege Sempre</strong></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><p>Ficamos muito mais tranquilos com a proteção nas janelas e sacada.</p><strong>Cliente Protege Sempre</strong></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><p>Serviço profissional, limpo e com ótima orientação desde o primeiro contato.</p><strong>Cliente Protege Sempre</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Dúvidas frequentes antes de pedir orçamento.</h2>
+          <p>Respostas curtas ajudam o cliente a decidir mais rápido e reduzem dúvidas repetidas no WhatsApp.</p>
+        </div>
+
+        <div class="faq">
+          <details class="reveal">
+            <summary>Vocês atendem somente Varginha?</summary>
+            <p>O foco é atendimento em Varginha-MG e região. Para confirmar disponibilidade na sua cidade, chame pelo WhatsApp e informe o endereço ou bairro.</p>
+          </details>
+          <details class="reveal">
+            <summary>Consigo pedir orçamento por foto?</summary>
+            <p>Sim. Você pode enviar fotos do local, medidas aproximadas e o tipo de serviço desejado. Se necessário, é feita uma avaliação mais detalhada.</p>
+          </details>
+          <details class="reveal">
+            <summary>As redes servem para pets?</summary>
+            <p>Sim. A página foi pensada para destacar proteção para crianças, família e pets, incluindo soluções para gatos e áreas externas.</p>
+          </details>
+          <details class="reveal">
+            <summary>O site já aceita fotos reais?</summary>
+            <p>Sim. Basta subir as imagens na pasta img/galeria com os nomes usados no código, como rede-protecao-01.jpg, tela-mosquiteira-01.jpg, gatil-01.jpg, quadra-01.jpg e insulfilm-01.jpg.</p>
+          </details>
         </div>
       </div>
     </section>
 
     <section id="orcamento">
       <div class="container">
-        <div class="cta">
+        <div class="cta reveal">
           <div>
             <h2>Proteja sua casa hoje mesmo.</h2>
-            <p>Solicite um orçamento rápido pelo WhatsApp. A Protege Sempre ajuda você a escolher a melhor solução para janelas, sacadas, varandas e ambientes comerciais.</p>
+            <p>Solicite um orçamento sem compromisso pelo WhatsApp. Informe o serviço desejado, envie fotos do local e receba orientação para a melhor solução.</p>
           </div>
 
           <form class="quote-card" onsubmit="sendQuote(event)">
@@ -945,12 +1232,14 @@
             <select id="servico" name="servico" required>
               <option value="Rede de proteção">Rede de proteção</option>
               <option value="Tela mosquiteira">Tela mosquiteira</option>
+              <option value="Gatil ou proteção para pets">Gatil ou proteção para pets</option>
+              <option value="Rede para quadra">Rede para quadra</option>
               <option value="Insulfilm">Insulfilm</option>
               <option value="Mais de um serviço">Mais de um serviço</option>
             </select>
 
-            <label for="cidade">Cidade</label>
-            <input id="cidade" name="cidade" placeholder="Ex: Varginha" />
+            <label for="cidade">Cidade ou bairro</label>
+            <input id="cidade" name="cidade" placeholder="Ex: Varginha, Centro" />
 
             <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
           </form>
@@ -962,14 +1251,19 @@
   <footer>
     <div class="container footer-grid">
       <div>© <span id="year"></span> Protege Sempre. Todos os direitos reservados.</div>
-      <div>Redes de proteção • Telas mosquiteiras • Insulfilm</div>
+      <div>Varginha-MG e região • Redes • Mosquiteiras • Gatil • Quadras • Insulfilm</div>
     </div>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
+  <a class="sticky-mobile-cta" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">Pedir orçamento pelo WhatsApp</a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById('mobileDrawer').classList.toggle('open');
+    }
 
     function sendQuote(event) {
       event.preventDefault();
@@ -983,6 +1277,14 @@
 
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
     }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
 </body>
 </html>
