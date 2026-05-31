@@ -1,0 +1,9 @@
+{
+  "name": "Protege Sempre",
+  "short_name": "Protege Sempre",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ecfdf5",
+  "theme_color": "#10b981",
+  "description": "Redes de proteção e telas mosquiteiras em Varginha-MG e região."
+}

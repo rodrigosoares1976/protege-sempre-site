@@ -3,17 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Protege Sempre | Redes de Proteção em Varginha-MG</title>
   <meta name="description" content="Redes de proteção, telas mosquiteiras, gatil e redes para quadras em Varginha-MG e região. Instalação profissional, acabamento discreto e orçamento pelo WhatsApp." />
-  <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, gatil Varginha, proteção para gatos, rede para sacada, rede para janela, redes para quadras, Protege Sempre" />
-  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, gatil Varginha, proteção para gatos, rede para sacada, rede para janela, redes para quadras, Protege Sempre Varginha" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Protege Sempre" />
   <meta name="theme-color" content="#ecfdf5" />
   <link rel="canonical" href="https://protegesempre.com.br/" />
+
   <meta property="og:title" content="Protege Sempre | Redes de Proteção em Varginha-MG" />
-  <meta property="og:description" content="Redes de proteção, telas mosquiteiras, gatil e redes para quadras. Orçamento rápido pelo WhatsApp." />
+  <meta property="og:description" content="Redes de proteção, telas mosquiteiras, gatil e redes para quadras em Varginha-MG e região. Peça orçamento pelo WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://protegesempre.com.br/" />
+  <meta property="og:image" content="https://protegesempre.com.br/img/galeria/hero-rede-protecao.jpg" />
   <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Protege Sempre | Redes de Proteção em Varginha-MG" />
+  <meta name="twitter:description" content="Proteção para sacadas, janelas, varandas, pets, telas mosquiteiras e quadras." />
+  <meta name="twitter:image" content="https://protegesempre.com.br/img/galeria/hero-rede-protecao.jpg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -25,14 +37,16 @@
       --green-dark: #047857;
       --green-soft: #d1fae5;
       --mint: #ecfdf5;
+      --blue: #0ea5e9;
       --blue-soft: #e0f2fe;
+      --yellow: #f59e0b;
       --text: #0f172a;
       --muted: #475569;
       --soft: #64748b;
       --line: #e2e8f0;
       --white: #ffffff;
       --bg: #f8fafc;
-      --card: rgba(255,255,255,.84);
+      --card: rgba(255,255,255,.86);
       --shadow: 0 22px 70px rgba(15,23,42,.10);
       --shadow-strong: 0 28px 90px rgba(15,23,42,.14);
       --radius: 28px;
@@ -54,9 +68,17 @@
     button, input, select { font: inherit; }
     .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
 
+    .skip-link {
+      position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 16px; top: 16px; width: auto; height: auto; z-index: 9999;
+      padding: 10px 14px; border-radius: 12px; background: var(--green-dark); color: white;
+    }
+
     .navbar {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,.86);
+      background: rgba(255,255,255,.88);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(226,232,240,.9);
     }
@@ -81,7 +103,6 @@
       color: var(--muted); font-size: .92rem; font-weight: 700; transition: var(--transition);
     }
     .nav-links a:hover { background: var(--mint); color: var(--green-dark); }
-
     .btn {
       min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       padding: 0 20px; border-radius: 999px; border: 1px solid transparent;
@@ -143,7 +164,7 @@
       font-size: clamp(1.05rem, 1.55vw, 1.24rem); line-height: 1.75; margin-bottom: 28px;
     }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
-    .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 700px; }
+    .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 760px; }
     .trust-pill {
       padding: 13px 14px; border-radius: 18px; background: rgba(255,255,255,.78);
       border: 1px solid rgba(226,232,240,.85); color: var(--muted);
@@ -151,44 +172,22 @@
     }
     .hero-visual {
       position: relative; min-height: 590px; border-radius: 42px; overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.48)),
-        radial-gradient(circle at 20% 20%, rgba(16,185,129,.24), transparent 30%),
-        radial-gradient(circle at 78% 70%, rgba(56,189,248,.22), transparent 34%);
+      background: #fff;
       border: 1px solid rgba(255,255,255,.86);
       box-shadow: var(--shadow-strong);
       isolation: isolate;
     }
-    .hero-visual::before {
-      content: ""; position: absolute; inset: -80px;
-      background:
-        linear-gradient(120deg, transparent 0 47%, rgba(15,23,42,.08) 48% 52%, transparent 53% 100%),
-        repeating-linear-gradient(90deg, rgba(15,23,42,.065) 0 1px, transparent 1px 28px),
-        repeating-linear-gradient(0deg, rgba(15,23,42,.055) 0 1px, transparent 1px 28px);
-      transform: rotate(-8deg); opacity: .9; z-index: -1;
+    .hero-photo {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     }
-    .window {
-      position: absolute; inset: 54px 42px 118px; border-radius: 32px;
-      border: 13px solid rgba(255,255,255,.94);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,.08), 0 28px 70px rgba(15,23,42,.16);
+    .hero-visual::after {
+      content: ""; position: absolute; inset: 0;
       background:
-        linear-gradient(135deg, rgba(14,165,233,.18), rgba(255,255,255,.32)),
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,.9), transparent 22%);
-      overflow: hidden;
-    }
-    .window::before, .window::after { content: ""; position: absolute; background: rgba(255,255,255,.94); z-index: 2; }
-    .window::before { width: 11px; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
-    .window::after { height: 11px; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
-    .net-pattern {
-      position: absolute; inset: 0;
-      background:
-        repeating-linear-gradient(45deg, rgba(15,23,42,.13) 0 1px, transparent 1px 12px),
-        repeating-linear-gradient(-45deg, rgba(15,23,42,.10) 0 1px, transparent 1px 12px);
-      opacity: .85;
+        linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.22) 46%, rgba(15,23,42,.56) 100%);
     }
     .float-card {
       position: absolute; z-index: 5; padding: 16px 18px; border-radius: 24px;
-      background: rgba(255,255,255,.84); border: 1px solid rgba(226,232,240,.84);
+      background: rgba(255,255,255,.88); border: 1px solid rgba(226,232,240,.84);
       backdrop-filter: blur(18px); box-shadow: 0 22px 58px rgba(15,23,42,.12);
     }
     .float-card strong { display: block; margin-bottom: 3px; }
@@ -218,13 +217,7 @@
       box-shadow: 0 18px 50px rgba(15,23,42,.06); transition: var(--transition);
       position: relative; overflow: hidden;
     }
-    .card::before {
-      content: ""; position: absolute; inset: auto -20% -45% -20%; height: 150px;
-      background: radial-gradient(circle, rgba(16,185,129,.15), transparent 62%);
-      opacity: 0; transition: var(--transition);
-    }
     .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(16,185,129,.28); }
-    .card:hover::before { opacity: 1; }
     .icon {
       width: 58px; height: 58px; display: grid; place-items: center; border-radius: 22px;
       margin-bottom: 18px; background: linear-gradient(135deg, var(--green-soft), var(--blue-soft));
@@ -252,16 +245,12 @@
     }
     .photo-panel {
       min-height: 440px; border-radius: 38px; border: 1px solid rgba(226,232,240,.9);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.25), rgba(15,23,42,.04)),
-        url("img/galeria/rede-protecao-01.jpg") center/cover no-repeat;
+      background: url("img/galeria/rede-protecao-sacada-vista.jpg") center/cover no-repeat;
       box-shadow: var(--shadow); position: relative; overflow: hidden;
     }
     .photo-panel::after {
       content: ""; position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, transparent 10%, rgba(255,255,255,.88) 100%),
-        repeating-linear-gradient(45deg, rgba(15,23,42,.08) 0 1px, transparent 1px 12px);
+      background: linear-gradient(180deg, transparent 10%, rgba(255,255,255,.84) 100%);
     }
 
     .gallery-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; grid-auto-rows: 260px; gap: 18px; }
@@ -279,14 +268,6 @@
       content: ""; position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 25%, rgba(15,23,42,.76) 100%);
     }
-    .gallery-fallback {
-      position: absolute; inset: 18px 18px 80px; border-radius: 22px;
-      background:
-        repeating-linear-gradient(45deg, rgba(15,23,42,.12) 0 1px, transparent 1px 8px),
-        linear-gradient(135deg, var(--green-soft), var(--blue-soft));
-      border: 10px solid rgba(255,255,255,.92);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,.06), 0 18px 45px rgba(15,23,42,.12);
-    }
     .gallery-content {
       position: absolute; left: 22px; right: 22px; bottom: 22px; z-index: 3; color: #fff;
     }
@@ -296,7 +277,7 @@
       font-weight: 900; font-size: .78rem; margin-bottom: 10px;
     }
     .gallery-content h3 { font-size: 1.22rem; letter-spacing: -.04em; margin-bottom: 5px; }
-    .gallery-content p { color: rgba(255,255,255,.78); line-height: 1.5; font-size: .92rem; }
+    .gallery-content p { color: rgba(255,255,255,.82); line-height: 1.5; font-size: .92rem; }
 
     .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
     .step {
@@ -311,6 +292,14 @@
     }
     .step h3 { margin-bottom: 10px; }
     .step p { color: var(--muted); line-height: 1.6; font-size: .95rem; }
+
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    details {
+      border-radius: 22px; background: rgba(255,255,255,.82); border: 1px solid var(--line);
+      padding: 18px 20px; box-shadow: 0 14px 40px rgba(15,23,42,.05);
+    }
+    summary { cursor: pointer; font-weight: 850; color: var(--text); }
+    details p { color: var(--muted); margin-top: 10px; line-height: 1.65; }
 
     .cta {
       border-radius: 38px; padding: 46px;
@@ -371,6 +360,7 @@
       .gallery-item.featured { grid-row: span 1; }
       .section-head { display: block; }
       .section-head p { margin-top: 16px; }
+      .faq { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .container { width: min(100% - 24px, 1180px); }
@@ -382,7 +372,6 @@
       .trust-strip, .cards, .process, .gallery-grid, .benefits { grid-template-columns: 1fr; }
       .gallery-grid { grid-auto-rows: 280px; }
       .hero-visual { min-height: 410px; border-radius: 30px; }
-      .window { inset: 52px 24px 98px; border-width: 9px; }
       .float-card { padding: 12px 14px; border-radius: 18px; }
       .f1 { top: 16px; right: 12px; }
       .f2 { left: 12px; bottom: 18px; }
@@ -399,26 +388,46 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Protege Sempre",
-    "url": "https://protegesempre.com.br/",
-    "telephone": "+553599936636",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Varginha",
-      "addressRegion": "MG",
-      "addressCountry": "BR"
-    },
-    "areaServed": "Varginha-MG e região",
-    "description": "Redes de proteção, telas mosquiteiras, gatil, proteção pet e redes para quadras em Varginha-MG e região.",
-    "sameAs": [
-      "https://www.instagram.com/protege_sempre/"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://protegesempre.com.br/#empresa",
+        "name": "Protege Sempre",
+        "url": "https://protegesempre.com.br/",
+        "telephone": "+553599936636",
+        "image": "https://protegesempre.com.br/img/galeria/hero-rede-protecao.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Varginha",
+          "addressRegion": "MG",
+          "addressCountry": "BR"
+        },
+        "areaServed": ["Varginha-MG", "Sul de Minas"],
+        "description": "Instalação de redes de proteção, telas mosquiteiras, gatil, proteção pet e redes para quadras em Varginha-MG e região.",
+        "sameAs": ["https://www.instagram.com/protege_sempre/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://protegesempre.com.br/#site",
+        "url": "https://protegesempre.com.br/",
+        "name": "Protege Sempre",
+        "publisher": { "@id": "https://protegesempre.com.br/#empresa" }
+      },
+      {
+        "@type": "Service",
+        "name": "Instalação de redes de proteção",
+        "provider": { "@id": "https://protegesempre.com.br/#empresa" },
+        "areaServed": "Varginha-MG e região",
+        "serviceType": "Redes de proteção, telas mosquiteiras, proteção pet e redes para quadras"
+      }
     ]
   }
   </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
   <header class="navbar">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Protege Sempre">
@@ -430,6 +439,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
         <a href="#processo">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
         <a href="#orcamento">Orçamento</a>
       </nav>
 
@@ -441,17 +451,18 @@
       <a href="#servicos" onclick="toggleMenu()">Serviços</a>
       <a href="#galeria" onclick="toggleMenu()">Galeria</a>
       <a href="#processo" onclick="toggleMenu()">Como funciona</a>
+      <a href="#duvidas" onclick="toggleMenu()">Dúvidas</a>
       <a href="#orcamento" onclick="toggleMenu()">Orçamento</a>
     </div>
   </header>
 
-  <main id="inicio">
-    <section class="hero">
+  <main id="conteudo">
+    <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="pulse"></span> Atendimento em Varginha-MG e região</div>
+          <div class="eyebrow"><span class="pulse"></span> Redes de proteção em Varginha-MG e região</div>
           <h1>Proteção leve, segura e <span class="gradient-text">feita sob medida.</span></h1>
-          <p class="hero-text">Redes de proteção, telas mosquiteiras, gatil e redes para quadras com acabamento profissional, visual discreto e orçamento rápido pelo WhatsApp.</p>
+          <p class="hero-text">Instalação de redes de proteção, telas mosquiteiras, gatil e redes para quadras com acabamento profissional, visual discreto e orçamento rápido pelo WhatsApp.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#orcamento">Solicitar orçamento</a>
@@ -460,14 +471,14 @@
 
           <div class="trust-strip">
             <div class="trust-pill">🛡️ Redes sob medida</div>
-            <div class="trust-pill">🦟 Mosquiteiras</div>
+            <div class="trust-pill">🦟 Telas mosquiteiras</div>
             <div class="trust-pill">🐾 Proteção para pets</div>
-            <div class="trust-pill">🏐 Quadras esportivas</div>
+            <div class="trust-pill">🏐 Quadras e áreas esportivas</div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Ilustração de janela com rede de proteção">
-          <div class="window"><div class="net-pattern"></div></div>
+        <div class="hero-visual" aria-label="Rede de proteção instalada em sacada residencial">
+          <img class="hero-photo" src="img/galeria/hero-rede-protecao.jpg" alt="Rede de proteção instalada em sacada residencial em Varginha" width="1200" height="900" fetchpriority="high">
           <div class="float-card f1"><strong>Proteção discreta</strong><span>Janelas, sacadas e varandas</span></div>
           <div class="float-card f2"><strong>Mais tranquilidade</strong><span>Para crianças, idosos e pets</span></div>
           <div class="float-card f3"><strong>Acabamento limpo</strong><span>Instalação sob medida</span></div>
@@ -482,7 +493,7 @@
             <span class="tag">Serviços</span>
             <h2>Soluções para proteger sua casa sem pesar no visual.</h2>
           </div>
-          <p>Uma comunicação mais leve, moderna e clara para gerar confiança e transformar visitantes em pedidos de orçamento.</p>
+          <p>Atendimento para casas, apartamentos, áreas externas, piscinas, janelas, sacadas, varandas e espaços de lazer.</p>
         </div>
 
         <div class="cards">
@@ -504,7 +515,7 @@
           <article class="card">
             <div class="icon">🏐</div>
             <h3>Quadras e áreas esportivas</h3>
-            <p>Redes de contenção e proteção para quadras, condomínios, clubes e espaços de lazer.</p>
+            <p>Redes de contenção e proteção para quadras, condomínios, clubes, piscinas e espaços de lazer.</p>
           </article>
         </div>
       </div>
@@ -512,7 +523,7 @@
 
     <section>
       <div class="container split">
-        <div class="photo-panel"></div>
+        <div class="photo-panel" role="img" aria-label="Rede de proteção instalada em sacada com vista"></div>
 
         <div class="soft-panel">
           <span class="tag">Diferenciais</span>
@@ -534,85 +545,51 @@
         <div class="section-head">
           <div>
             <span class="tag">Galeria</span>
-            <h2>Instalações reais com visual moderno.</h2>
+            <h2>Instalações reais com acabamento profissional.</h2>
           </div>
-          <p>Suba as fotos na pasta <strong>img/galeria/</strong>. O site já está pronto para trocar os blocos por imagens reais automaticamente.</p>
+          <p>Veja exemplos de redes de proteção e telas mosquiteiras instaladas em casas, sacadas, janelas, piscinas e áreas externas.</p>
         </div>
 
         <div class="gallery-grid">
-
           <article class="gallery-item featured">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-sacada-01.jpg" alt="Rede de proteção em sacada residencial" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Redes de proteção</span>
-              <h3>Sacadas e varandas protegidas</h3>
-              <p>Mais segurança sem perder a vista e a ventilação.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/rede-protecao-sacada-apartamento.jpg" alt="Rede de proteção em sacada de apartamento" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Sacadas</span><h3>Segurança sem perder a vista</h3><p>Proteção discreta para apartamentos e varandas.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-janela-01.jpg" alt="Rede de proteção em janela residencial" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Janelas</span>
-              <h3>Proteção sob medida</h3>
-              <p>Instalação discreta em diferentes tipos de abertura.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/rede-protecao-janela-residencial.jpg" alt="Rede de proteção em janela residencial" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Janelas</span><h3>Proteção sob medida</h3><p>Ideal para quartos, salas e áreas superiores.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-piscina-01.jpg" alt="Rede de proteção sobre piscina" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Piscina</span>
-              <h3>Áreas de lazer mais seguras</h3>
-              <p>Proteção para ambientes externos e áreas de risco.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/rede-protecao-piscina.jpg" alt="Rede de proteção sobre piscina" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Piscinas</span><h3>Áreas de lazer mais seguras</h3><p>Proteção para ambientes externos e de risco.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-01.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Mosquiteiras</span>
-              <h3>Conforto contra insetos</h3>
-              <p>Ventilação natural com proteção no dia a dia.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-externa.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Mosquiteiras</span><h3>Conforto contra insetos</h3><p>Ventilação natural com proteção no dia a dia.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-corredor-01.jpg" alt="Rede de proteção em corredor externo" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Áreas externas</span>
-              <h3>Fechamento de corredores</h3>
-              <p>Soluções para casas, laterais e áreas abertas.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/rede-protecao-corredor-externo.jpg" alt="Rede de proteção em corredor externo" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Áreas externas</span><h3>Fechamento de corredores</h3><p>Soluções para casas, laterais e áreas abertas.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-04.jpg" alt="Tela mosquiteira em janela de madeira" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Acabamento</span>
-              <h3>Visual limpo e funcional</h3>
-              <p>Mosquiteiras combinando com o ambiente.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-madeira.jpg" alt="Tela mosquiteira em janela de madeira" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Acabamento</span><h3>Visual limpo e funcional</h3><p>Mosquiteiras combinando com o ambiente.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/rede-protecao-casa-01.jpg" alt="Rede de proteção em fachada residencial" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Residencial</span>
-              <h3>Proteção para a casa toda</h3>
-              <p>Janelas, sacadas, varandas e áreas superiores.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/rede-protecao-fachada-residencial.jpg" alt="Rede de proteção em fachada residencial" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Residencial</span><h3>Proteção para a casa toda</h3><p>Janelas, sacadas, varandas e áreas superiores.</p></div>
           </article>
 
           <article class="gallery-item">
-            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-02.jpg" alt="Tela mosquiteira residencial em janela" loading="lazy">
-            <div class="gallery-content">
-              <span class="gallery-tag">Mosquiteiras</span>
-              <h3>Praticidade e conforto</h3>
-              <p>Proteção contra insetos sem bloquear a claridade.</p>
-            </div>
+            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-janela-trilho.jpg" alt="Tela mosquiteira residencial em janela" loading="lazy">
+            <div class="gallery-content"><span class="gallery-tag">Mosquiteiras</span><h3>Praticidade e conforto</h3><p>Proteção contra insetos sem bloquear a claridade.</p></div>
           </article>
-
         </div>
       </div>
     </section>
@@ -636,6 +613,37 @@
       </div>
     </section>
 
+    <section id="duvidas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Dúvidas frequentes</span>
+            <h2>Perguntas comuns antes de pedir orçamento.</h2>
+          </div>
+          <p>Conteúdo útil para melhorar SEO, reduzir dúvidas e aumentar a confiança de quem visita o site.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Vocês atendem somente Varginha?</summary>
+            <p>O atendimento é voltado para Varginha-MG e região. Para confirmar disponibilidade na sua cidade ou bairro, chame pelo WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Consigo pedir orçamento por foto?</summary>
+            <p>Sim. Você pode enviar fotos do local, medidas aproximadas e o tipo de serviço desejado. Se necessário, é agendada uma avaliação técnica.</p>
+          </details>
+          <details>
+            <summary>As redes são indicadas para pets?</summary>
+            <p>Sim. As redes são muito usadas para proteger gatos, cães e outros pets em janelas, sacadas, corredores e áreas externas.</p>
+          </details>
+          <details>
+            <summary>Vocês fazem telas mosquiteiras?</summary>
+            <p>Sim. As telas mosquiteiras ajudam a reduzir a entrada de insetos, mantendo ventilação e luminosidade no ambiente.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section id="orcamento">
       <div class="container">
         <div class="cta">
@@ -647,19 +655,19 @@
 
           <form class="quote-card" onsubmit="sendQuote(event)">
             <label for="nome">Seu nome</label>
-            <input id="nome" name="nome" placeholder="Digite seu nome" required>
+            <input id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
 
             <label for="servico">Serviço desejado</label>
             <select id="servico" name="servico" required>
               <option value="Rede de proteção">Rede de proteção</option>
               <option value="Tela mosquiteira">Tela mosquiteira</option>
               <option value="Gatil ou proteção pet">Gatil ou proteção pet</option>
-              <option value="Rede para quadra">Rede para quadra</option>
+              <option value="Rede para quadra ou área de lazer">Rede para quadra ou área de lazer</option>
               <option value="Mais de um serviço">Mais de um serviço</option>
             </select>
 
             <label for="cidade">Cidade ou bairro</label>
-            <input id="cidade" name="cidade" placeholder="Ex: Varginha, Centro">
+            <input id="cidade" name="cidade" placeholder="Ex: Varginha, Centro" autocomplete="address-level2">
 
             <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
           </form>

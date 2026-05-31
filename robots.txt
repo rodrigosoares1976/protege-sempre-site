@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://protegesempre.com.br/sitemap.xml
