@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protege Sempre | Redes de Proteção, Telas Mosquiteiras e Insulfilm</title>
+  <meta name="description" content="Protege Sempre: instalação profissional de redes de proteção, telas mosquiteiras e insulfilm com acabamento, segurança, garantia e emissão de NF-e." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg2: #0f172a;
+      --card: rgba(255, 255, 255, 0.08);
+      --card2: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --soft: #94a3b8;
+      --line: rgba(255,255,255,.14);
+      --brand: #f59e0b;
+      --brand2: #22c55e;
+      --blue: #38bdf8;
+      --danger: #ef4444;
+      --shadow: 0 24px 80px rgba(0,0,0,.35);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(245,158,11,.18), transparent 34%),
+        linear-gradient(180deg, #07111f 0%, #0f172a 44%, #020617 100%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(2, 6, 23, .68);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      font-size: 1.2rem;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 14px 40px rgba(245, 158, 11, .28);
+    }
+
+    .brand-mark svg { width: 25px; height: 25px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), #fb923c);
+      color: #111827;
+      border: 0;
+      box-shadow: 0 16px 40px rgba(245, 158, 11, .32);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .btn-ghost { background: rgba(255,255,255,.06); color: var(--text); }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+    .hero {
+      position: relative;
+      padding: 86px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      color: var(--muted);
+      padding: 9px 13px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--brand2);
+      box-shadow: 0 0 0 8px rgba(34,197,94,.12);
+    }
+
+    h1 {
+      font-size: clamp(2.55rem, 5vw, 5.8rem);
+      line-height: .94;
+      letter-spacing: -.075em;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff, #fde68a 48%, #86efac);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+      max-width: 640px;
+    }
+
+    .trust-item {
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+    }
+
+    .trust-item strong { display: block; font-size: 1.4rem; letter-spacing: -.04em; }
+    .trust-item span { color: var(--soft); font-size: .88rem; }
+
+    .visual-card {
+      position: relative;
+      min-height: 560px;
+      border-radius: 38px;
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px;
+      background:
+        linear-gradient(120deg, transparent 0 47%, rgba(255,255,255,.14) 48% 52%, transparent 53% 100%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 28px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 28px);
+      transform: rotate(-8deg);
+      opacity: .9;
+    }
+
+    .window-frame {
+      position: absolute;
+      inset: 54px 44px 94px;
+      border: 14px solid rgba(226,232,240,.88);
+      border-radius: 28px;
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.15), 0 24px 60px rgba(0,0,0,.32);
+      background:
+        linear-gradient(135deg, rgba(14,165,233,.35), rgba(15,23,42,.1)),
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.5), transparent 22%);
+    }
+
+    .window-frame::before,
+    .window-frame::after {
+      content: "";
+      position: absolute;
+      background: rgba(226,232,240,.92);
+    }
+
+    .window-frame::before { width: 12px; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
+    .window-frame::after { height: 12px; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
+
+    .floating-badge {
+      position: absolute;
+      z-index: 2;
+      border-radius: 24px;
+      padding: 16px 18px;
+      background: rgba(2, 6, 23, .78);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.28);
+    }
+
+    .badge-1 { right: 24px; top: 36px; }
+    .badge-2 { left: 22px; bottom: 34px; }
+    .badge-3 { right: 38px; bottom: 150px; }
+
+    .floating-badge strong { display: block; font-size: 1.05rem; }
+    .floating-badge span { color: var(--soft); font-size: .86rem; }
+
+    section { padding: 70px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3.5vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+      max-width: 720px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 430px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--line);
+      min-height: 260px;
+      transition: .25s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); background: var(--card2); }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(245,158,11,.22), rgba(34,197,94,.16));
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .card h3 { font-size: 1.35rem; margin-bottom: 12px; letter-spacing: -.03em; }
+    .card p { color: var(--muted); line-height: 1.65; }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .85fr .85fr;
+      grid-auto-rows: 245px;
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.16);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
+        radial-gradient(circle at 30% 20%, rgba(245,158,11,.24), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(34,197,94,.20), transparent 30%),
+        #0f172a;
+      box-shadow: 0 22px 70px rgba(0,0,0,.24);
+      isolation: isolate;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 28%, rgba(2,6,23,.84) 100%);
+    }
+
+    .gallery-item.featured { grid-row: span 2; }
+
+    .gallery-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: .35s ease;
+    }
+
+    .gallery-item:hover .gallery-photo { transform: scale(1.08); }
+
+    .gallery-fallback {
+      position: absolute;
+      inset: 18px 18px 78px;
+      border-radius: 22px;
+      background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px),
+        linear-gradient(135deg, rgba(34,197,94,.16), rgba(56,189,248,.16));
+      border: 10px solid rgba(226,232,240,.88);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.25), 0 18px 45px rgba(0,0,0,.22);
+    }
+
+    .gallery-content {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2;
+    }
+
+    .gallery-tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(245,158,11,.92);
+      color: #111827;
+      font-weight: 800;
+      font-size: .78rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery-content h3 {
+      font-size: 1.25rem;
+      letter-spacing: -.04em;
+      margin-bottom: 5px;
+    }
+
+    .gallery-content p {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: .92rem;
+    }
+
+    .gallery-note {
+      margin-top: 18px;
+      color: var(--soft);
+      font-size: .92rem;
+      line-height: 1.6;
+    }
+
+    .step {
+      position: relative;
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--line);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: inline-flex;
+      color: #111827;
+      background: var(--brand);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .step h3 { margin-bottom: 10px; }
+    .step p { color: var(--muted); line-height: 1.6; font-size: .95rem; }
+
+    .cta {
+      border-radius: 38px;
+      padding: 46px;
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,.22), transparent 32%),
+        linear-gradient(135deg, rgba(245,158,11,.16), rgba(255,255,255,.08));
+      border: 1px solid rgba(255,255,255,.16);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 { font-size: clamp(2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.06em; margin-bottom: 18px; }
+    .cta p { color: var(--muted); line-height: 1.7; }
+
+    .quote-card {
+      background: rgba(2,6,23,.55);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 24px;
+    }
+
+    .quote-card label { display: block; color: var(--soft); font-size: .85rem; margin-bottom: 8px; }
+    .quote-card input,
+    .quote-card select {
+      width: 100%;
+      min-height: 48px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      padding: 0 14px;
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    .quote-card select option { color: #111827; }
+    .quote-card .btn { width: 100%; margin-top: 8px; }
+
+    footer {
+      padding: 38px 0 48px;
+      color: var(--soft);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #22c55e;
+      color: #052e16;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 50px rgba(34,197,94,.35);
+      font-weight: 900;
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 54px; }
+      .hero-grid,
+      .cta { grid-template-columns: 1fr; }
+      .visual-card { min-height: 480px; }
+      .cards { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item.featured { grid-row: span 1; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 16px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 24px, 1180px); }
+      .nav { height: 68px; }
+      .brand { font-size: 1rem; }
+      .brand-mark { width: 40px; height: 40px; }
+      .hero-actions .btn { width: 100%; }
+      .trust-row { grid-template-columns: 1fr; }
+      .visual-card { min-height: 410px; border-radius: 28px; }
+      .window-frame { inset: 54px 24px 86px; border-width: 10px; }
+      .badge-1 { right: 12px; top: 18px; }
+      .badge-2 { left: 12px; bottom: 20px; }
+      .badge-3 { right: 14px; bottom: 118px; }
+      .floating-badge { padding: 12px 14px; border-radius: 18px; }
+      .process { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+      .cta { padding: 28px; border-radius: 28px; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Protege Sempre">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.7-2.9 8.7-7 10-4.1-1.3-7-5.3-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M8.5 12.2l2.1 2.1 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Protege Sempre
+      </a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#orcamento">Orçamento</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/5500000000000?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill"><span class="dot"></span> Segurança, conforto e acabamento profissional</div>
+          <h1>Proteção para sua casa, <span class="gradient-text">sem perder a beleza do ambiente.</span></h1>
+          <p>Instalação profissional de redes de proteção, telas mosquiteiras e insulfilm para janelas, sacadas, varandas e ambientes residenciais ou comerciais.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#orcamento">Solicitar orçamento</a>
+            <a class="btn btn-ghost" href="#servicos">Conhecer soluções</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-item"><strong>5 anos</strong><span>de garantia informada</span></div>
+            <div class="trust-item"><strong>NF-e</strong><span>emissão de nota fiscal</span></div>
+            <div class="trust-item"><strong>10 anos</strong><span>durabilidade média</span></div>
+          </div>
+        </div>
+
+        <div class="visual-card" aria-label="Ilustração de janela protegida">
+          <div class="window-frame"></div>
+          <div class="floating-badge badge-1"><strong>Rede de proteção</strong><span>Segurança para crianças e pets</span></div>
+          <div class="floating-badge badge-2"><strong>Tela mosquiteira</strong><span>Mais conforto contra insetos</span></div>
+          <div class="floating-badge badge-3"><strong>Insulfilm</strong><span>Privacidade e controle solar</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Soluções pensadas para proteger o que importa.</h2>
+          <p>Um site direto, moderno e voltado para conversão: o visitante entende o serviço, confia na empresa e chama no WhatsApp.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>Redes de proteção</h3>
+            <p>Instalação em janelas, sacadas, varandas e áreas de risco, com foco em segurança, resistência e acabamento discreto.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🦟</div>
+            <h3>Telas mosquiteiras</h3>
+            <p>Mais conforto para ambientes internos, reduzindo a entrada de mosquitos, pernilongos e insetos sem bloquear a ventilação.</p>
+          </article>
+          <article class="card">
+            <div class="icon">☀️</div>
+            <h3>Insulfilm</h3>
+            <p>Aplicação para privacidade, conforto térmico e proteção solar em vidros residenciais, comerciais e corporativos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="diferenciais">
+      <div class="container">
+        <div class="section-head">
+          <h2>Por que escolher a Protege Sempre?</h2>
+          <p>A comunicação deve transmitir confiança rápida: segurança, garantia, nota fiscal, durabilidade e acabamento profissional.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">✅</div>
+            <h3>Instalação profissional</h3>
+            <p>Execução cuidadosa, medição correta e acabamento pensado para valorizar o imóvel.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📄</div>
+            <h3>Garantia e NF-e</h3>
+            <p>Mais segurança para o cliente com garantia informada e emissão de nota fiscal eletrônica.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🏠</div>
+            <h3>Atendimento consultivo</h3>
+            <p>Orientação para escolher a solução ideal conforme o ambiente, necessidade e nível de proteção desejado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo">
+      <div class="container">
+        <div class="section-head">
+          <h2>Do orçamento à instalação, tudo simples.</h2>
+          <p>Uma jornada objetiva ajuda a reduzir dúvidas e aumentar pedidos pelo WhatsApp.</p>
+        </div>
+        <div class="process">
+          <div class="step"><h3>Contato</h3><p>Cliente chama pelo WhatsApp e informa o tipo de ambiente.</p></div>
+          <div class="step"><h3>Medidas</h3><p>A equipe solicita fotos, medidas ou agenda uma avaliação técnica.</p></div>
+          <div class="step"><h3>Orçamento</h3><p>Proposta clara com solução indicada, prazo e condições.</p></div>
+          <div class="step"><h3>Instalação</h3><p>Serviço executado com qualidade, segurança e acabamento profissional.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <h2>Galeria de instalações e acabamentos.</h2>
+          <p>Uma área visual para mostrar exemplos reais dos serviços, inspirada no conteúdo do Instagram da Protege Sempre.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-item featured">
+            <img class="gallery-photo" src="img/galeria/rede-protecao-01.jpg" alt="Rede de proteção instalada em janela ou sacada" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content">
+              <span class="gallery-tag">Rede de proteção</span>
+              <h3>Segurança para janelas, sacadas e varandas</h3>
+              <p>Ideal para famílias com crianças, pets e ambientes em altura.</p>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <img class="gallery-photo" src="img/galeria/acabamento-01.jpg" alt="Acabamento de instalação de rede de proteção" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content">
+              <span class="gallery-tag">Acabamento</span>
+              <h3>Instalação discreta</h3>
+              <p>Proteção sem comprometer a estética do imóvel.</p>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <img class="gallery-photo" src="img/galeria/tela-mosquiteira-01.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content">
+              <span class="gallery-tag">Tela mosquiteira</span>
+              <h3>Conforto contra insetos</h3>
+              <p>Ventilação natural com mais tranquilidade no dia a dia.</p>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <img class="gallery-photo" src="img/galeria/insulfilm-01.jpg" alt="Aplicação de insulfilm em vidro" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content">
+              <span class="gallery-tag">Insulfilm</span>
+              <h3>Privacidade e controle solar</h3>
+              <p>Mais conforto térmico e visual para vidros e fachadas.</p>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <img class="gallery-photo" src="img/galeria/antes-depois-01.jpg" alt="Antes e depois de ambiente protegido" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="gallery-fallback" style="display:none"></div>
+            <div class="gallery-content">
+              <span class="gallery-tag">Antes e depois</span>
+              <h3>Ambientes mais seguros</h3>
+              <p>Espaços protegidos com solução sob medida.</p>
+            </div>
+          </article>
+        </div>
+        <p class="gallery-note">Para usar as fotos reais do Instagram, salve as imagens na pasta <strong>img/galeria/</strong> com os nomes: <strong>rede-protecao-01.jpg</strong>, <strong>acabamento-01.jpg</strong>, <strong>tela-mosquiteira-01.jpg</strong>, <strong>insulfilm-01.jpg</strong> e <strong>antes-depois-01.jpg</strong>. Caso alguma imagem não exista, o site mostra um bloco visual reserva automaticamente.</p>
+      </div>
+    </section>
+
+    <section id="orcamento">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Quer proteger sua casa com segurança e elegância?</h2>
+            <p>Solicite um orçamento rápido pelo WhatsApp. A Protege Sempre ajuda você a escolher a melhor solução para janelas, varandas, sacadas e ambientes comerciais.</p>
+          </div>
+          <form class="quote-card" onsubmit="sendQuote(event)">
+            <label for="nome">Seu nome</label>
+            <input id="nome" name="nome" placeholder="Digite seu nome" required />
+            <label for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" required>
+              <option value="Rede de proteção">Rede de proteção</option>
+              <option value="Tela mosquiteira">Tela mosquiteira</option>
+              <option value="Insulfilm">Insulfilm</option>
+              <option value="Mais de um serviço">Mais de um serviço</option>
+            </select>
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" placeholder="Ex: Varginha" />
+            <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Protege Sempre. Todos os direitos reservados.</div>
+      <div>Redes de proteção • Telas mosquiteiras • Insulfilm</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5500000000000?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener" aria-label="WhatsApp">W</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendQuote(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const servico = document.getElementById('servico').value;
+      const cidade = document.getElementById('cidade').value.trim();
+      const msg = `Olá! Meu nome é ${nome}. Quero um orçamento para ${servico}${cidade ? ' em ' + cidade : ''}.`;
+      const phone = '5500000000000';
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
