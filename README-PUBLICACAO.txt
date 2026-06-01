@@ -1,35 +1,24 @@
-# Protege Sempre - pacote final SEO
+# Protege Sempre - site atualizado pelo manual de identidade visual
 
-Arquivos inclusos:
-- index.html
-- robots.txt
-- sitemap.xml
-- favicon.svg
-- site.webmanifest
-- _headers para Cloudflare Pages
-- 404.html
-- img/galeria/ com imagens otimizadas
+Este pacote foi reorganizado com base no Manual de Identidade Visual da Protege Sempre.
 
-Melhorias aplicadas:
-- Remoção total de insulfilm
-- SEO local para Varginha-MG e região
-- Meta title, description, canonical, Open Graph e Twitter Card
-- Schema JSON-LD LocalBusiness, Website e Service
-- FAQ para SEO e conversão
-- Galeria real com imagens otimizadas
-- Alt text nas imagens
-- WhatsApp correto: 55 35 99936-636
-- Robots e sitemap
-- Headers de segurança e cache para Cloudflare Pages
+Aplicado:
+- Logo oficial no topo, usando a versão horizontal para fundo claro
+- Logo oficial no rodapé, usando a versão para fundo escuro
+- Paleta oficial:
+  - Azul Proteção: #2A6F97
+  - Verde Cuidado: #62A87C
+  - Grafite Profissional: #343A40
+- Tipografia com Roboto, conforme orientação do manual
+- Slogan oficial: "Tranquilidade que se vê. Proteção que se sente."
+- Remoção de insulfilm
+- Serviços alinhados ao manual: redes, telas mosquiteiras, gatil, piscinas e quadras
+- SEO local para Varginha/MG
+- Schema JSON-LD, Open Graph, Twitter Card, sitemap, robots, headers e página 404
+- Galeria com fotos reais já otimizadas
 
 Publicação:
-Copie todos os arquivos para a raiz do repositório GitHub, faça Commit to main e Push origin.
-
-Atualização:
-- Logotipo premium no topo em SVG, sem emoji
-- Símbolo com escudo, rede e check
-- Cabeçalho mais profissional no desktop e celular
-- Remoção de textos internos de desenvolvimento
-
-
-Atualização: logo premium aplicada no topo em versão otimizada para cabeçalho, sem slogan pequeno.
+1. Extraia este ZIP dentro da pasta do repositório protege-sempre-site.
+2. Substitua os arquivos existentes.
+3. Faça Commit to main.
+4. Clique em Push origin.

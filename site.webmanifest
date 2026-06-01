@@ -3,9 +3,9 @@
   "short_name": "Protege Sempre",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ecfdf5",
-  "theme_color": "#10b981",
-  "description": "Redes de proteção e telas mosquiteiras em Varginha-MG e região.",
+  "background_color": "#f7fafb",
+  "theme_color": "#2A6F97",
+  "description": "Redes de proteção, telas mosquiteiras, gatil, piscinas e quadras em Varginha-MG e região.",
   "icons": [
     {
       "src": "/favicon-192.png",
