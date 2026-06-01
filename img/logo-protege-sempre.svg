@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="72" viewBox="0 0 252 72" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Protege Sempre</title>
+  <desc id="desc">Logotipo da Protege Sempre com escudo, rede de proteção e marca de confirmação</desc>
+  <defs>
+    <linearGradient id="shieldGradient" x1="8" y1="8" x2="62" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BBF7D0"/>
+      <stop offset="0.55" stop-color="#86EFAC"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="80" y1="17" x2="208" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#064E3B"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <filter id="softShadow" x="0" y="0" width="76" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#10B981" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <g filter="url(#softShadow)">
+    <rect x="8" y="8" width="56" height="56" rx="18" fill="url(#shieldGradient)"/>
+    <path d="M36 17L51 23V34.2C51 44.2 44.9 52.4 36 56C27.1 52.4 21 44.2 21 34.2V23L36 17Z" fill="white" fill-opacity="0.82" stroke="#047857" stroke-width="2.25" stroke-linejoin="round"/>
+    <path d="M25 29.5H47" stroke="#047857" stroke-opacity="0.28" stroke-width="1"/>
+    <path d="M24 35.5H48" stroke="#047857" stroke-opacity="0.28" stroke-width="1"/>
+    <path d="M27 24L45 47" stroke="#047857" stroke-opacity="0.22" stroke-width="1"/>
+    <path d="M45 24L27 47" stroke="#047857" stroke-opacity="0.22" stroke-width="1"/>
+    <path d="M29.5 37.2L34.1 41.8L43.4 30.6" stroke="#047857" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="78" y="35" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="-1.4" fill="#0F172A">Protege</text>
+  <text x="171" y="35" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="-1.4" fill="url(#textGradient)">Sempre</text>
+  <rect x="79" y="45" width="116" height="2.8" rx="1.4" fill="#10B981"/>
+  <text x="79" y="61" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="800" letter-spacing="1.05" fill="#64748B">REDES • MOSQUITEIRAS • PETS</text>
+</svg>

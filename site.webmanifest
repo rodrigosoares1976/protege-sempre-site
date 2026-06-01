@@ -3,19 +3,14 @@
   "short_name": "Protege Sempre",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f3fbf5",
-  "theme_color": "#075a95",
+  "background_color": "#ecfdf5",
+  "theme_color": "#10b981",
   "description": "Redes de proteção e telas mosquiteiras em Varginha-MG e região.",
   "icons": [
     {
-      "src": "/favicon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

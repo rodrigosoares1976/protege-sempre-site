@@ -9,7 +9,7 @@
   <meta name="keywords" content="redes de proteção Varginha, tela mosquiteira Varginha, gatil Varginha, proteção para gatos, rede para sacada, rede para janela, redes para quadras, Protege Sempre Varginha" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Protege Sempre" />
-  <meta name="theme-color" content="#075a95" />
+  <meta name="theme-color" content="#ecfdf5" />
   <link rel="canonical" href="https://protegesempre.com.br/" />
 
   <meta property="og:title" content="Protege Sempre | Redes de Proteção em Varginha-MG" />
@@ -24,10 +24,8 @@
   <meta name="twitter:description" content="Proteção para sacadas, janelas, varandas, pets, telas mosquiteiras e quadras." />
   <meta name="twitter:image" content="https://protegesempre.com.br/img/galeria/hero-rede-protecao.jpg" />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
-  <link rel="apple-touch-icon" href="favicon-180.png" />
-  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -35,13 +33,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --green: #4b8f42;
-      --green-dark: #2f6f2e;
-      --green-soft: #dff3df;
-      --mint: #f3fbf5;
-      --blue: #075a95;
-      --blue-dark: #03406e;
-      --blue-soft: #e5f3fb;
+      --green: #10b981;
+      --green-dark: #047857;
+      --green-soft: #d1fae5;
+      --mint: #ecfdf5;
+      --blue: #0ea5e9;
+      --blue-soft: #e0f2fe;
       --yellow: #f59e0b;
       --text: #0f172a;
       --muted: #475569;
@@ -60,9 +57,9 @@
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(75,143,66,.16), transparent 32%),
-        radial-gradient(circle at top right, rgba(7,90,149,.13), transparent 34%),
-        linear-gradient(180deg, #f8fafc 0%, #f3fbf5 45%, #ffffff 100%);
+        radial-gradient(circle at top left, rgba(16,185,129,.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(14,165,233,.14), transparent 34%),
+        linear-gradient(180deg, #f8fafc 0%, #ecfdf5 45%, #ffffff 100%);
       overflow-x: hidden;
       line-height: 1.6;
     }
@@ -86,34 +83,20 @@
       border-bottom: 1px solid rgba(226,232,240,.9);
     }
     .nav {
-      min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px;
     }
     .brand {
       display: inline-flex; align-items: center; gap: 12px;
-      min-width: 210px;
-    }
-    .brand-logo {
-      width: 228px; height: auto; max-height: 58px; object-fit: contain;
-      filter: drop-shadow(0 8px 18px rgba(15,23,42,.08));
+      font-weight: 900; letter-spacing: -.04em; font-size: 1.14rem;
     }
     .brand-mark {
-      width: 52px; height: 52px; border-radius: 18px;
-      object-fit: contain; padding: 4px; background: #fff;
-      box-shadow: 0 14px 36px rgba(7,90,149,.14);
-      border: 1px solid rgba(7,90,149,.10);
+      width: 44px; height: 44px; border-radius: 17px;
+      display: grid; place-items: center; color: #064e3b;
+      background: linear-gradient(135deg, #bbf7d0, #67e8f9);
+      box-shadow: 0 14px 36px rgba(16,185,129,.23);
+      border: 1px solid rgba(16,185,129,.16);
     }
-    .hero-logo {
-      width: min(360px, 88vw); height: auto; margin: 0 0 20px;
-      filter: drop-shadow(0 18px 34px rgba(15,23,42,.10));
-    }
-    .hero-brand-card {
-      display: inline-flex; align-items: center; gap: 14px; padding: 12px 16px;
-      border-radius: 24px; background: rgba(255,255,255,.84); border: 1px solid rgba(226,232,240,.88);
-      box-shadow: 0 18px 46px rgba(15,23,42,.08); margin-bottom: 20px;
-    }
-    .hero-brand-card img { width: 62px; height: 62px; object-fit: contain; }
-    .hero-brand-card strong { display: block; color: var(--blue); letter-spacing: -.035em; font-size: 1.08rem; }
-    .hero-brand-card span { display: block; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .brand span { color: var(--green-dark); }
     .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
     .nav-links a {
       display: inline-flex; padding: 9px 13px; border-radius: 999px;
@@ -126,14 +109,14 @@
       font-weight: 850; cursor: pointer; transition: var(--transition); white-space: nowrap;
     }
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      color: #ffffff; box-shadow: 0 16px 36px rgba(75,143,66,.25);
+      background: linear-gradient(135deg, var(--green), #34d399);
+      color: #052e16; box-shadow: 0 16px 36px rgba(16,185,129,.28);
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 48px rgba(75,143,66,.30); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 48px rgba(16,185,129,.32); }
     .btn-secondary {
       background: rgba(255,255,255,.74); border-color: var(--line); color: var(--text);
     }
-    .btn-secondary:hover { transform: translateY(-2px); border-color: rgba(7,90,149,.22); background: #fff; }
+    .btn-secondary:hover { transform: translateY(-2px); border-color: rgba(16,185,129,.35); background: #fff; }
     .hamburger {
       display: none; width: 46px; height: 46px; border-radius: 16px;
       border: 1px solid var(--line); background: #fff; cursor: pointer; color: var(--text); font-size: 1.2rem;
@@ -160,20 +143,20 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 9px; padding: 10px 14px;
       border-radius: 999px; background: rgba(255,255,255,.84);
-      border: 1px solid rgba(7,90,149,.18); color: var(--green-dark);
+      border: 1px solid rgba(16,185,129,.22); color: var(--green-dark);
       font-weight: 850; font-size: .9rem; margin-bottom: 22px;
       box-shadow: 0 10px 30px rgba(15,23,42,.05);
     }
     .pulse {
       width: 9px; height: 9px; border-radius: 999px; background: var(--green);
-      box-shadow: 0 0 0 8px rgba(75,143,66,.13);
+      box-shadow: 0 0 0 8px rgba(16,185,129,.13);
     }
     h1 {
       font-size: clamp(2.75rem, 6vw, 6rem);
       line-height: .92; letter-spacing: -.08em; margin-bottom: 24px;
     }
     .gradient-text {
-      background: linear-gradient(135deg, var(--blue), var(--green));
+      background: linear-gradient(135deg, var(--green-dark), #0891b2);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .hero-text {
@@ -234,11 +217,11 @@
       box-shadow: 0 18px 50px rgba(15,23,42,.06); transition: var(--transition);
       position: relative; overflow: hidden;
     }
-    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(75,143,66,.25); }
+    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(16,185,129,.28); }
     .icon {
       width: 58px; height: 58px; display: grid; place-items: center; border-radius: 22px;
       margin-bottom: 18px; background: linear-gradient(135deg, var(--green-soft), var(--blue-soft));
-      border: 1px solid rgba(7,90,149,.12); font-size: 1.38rem;
+      border: 1px solid rgba(16,185,129,.16); font-size: 1.38rem;
     }
     .card h3 { font-size: 1.26rem; letter-spacing: -.035em; margin-bottom: 10px; }
     .card p { color: var(--muted); line-height: 1.66; font-size: .94rem; }
@@ -247,7 +230,7 @@
     .soft-panel {
       border-radius: 38px; padding: 42px;
       background:
-        radial-gradient(circle at top right, rgba(7,90,149,.12), transparent 34%),
+        radial-gradient(circle at top right, rgba(16,185,129,.16), transparent 34%),
         rgba(255,255,255,.78);
       border: 1px solid rgba(226,232,240,.9); box-shadow: var(--shadow);
     }
@@ -304,8 +287,8 @@
     .step::before {
       counter-increment: step; content: "0" counter(step);
       display: inline-flex; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      color: #ffffff; font-weight: 950;
+      background: linear-gradient(135deg, var(--green), #67e8f9);
+      color: #064e3b; font-weight: 950;
     }
     .step h3 { margin-bottom: 10px; }
     .step p { color: var(--muted); line-height: 1.6; font-size: .95rem; }
@@ -321,8 +304,8 @@
     .cta {
       border-radius: 38px; padding: 46px;
       background:
-        radial-gradient(circle at top right, rgba(75,143,66,.18), transparent 32%),
-        radial-gradient(circle at bottom left, rgba(7,90,149,.13), transparent 28%),
+        radial-gradient(circle at top right, rgba(16,185,129,.20), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(14,165,233,.14), transparent 28%),
         rgba(255,255,255,.84);
       border: 1px solid rgba(226,232,240,.9); box-shadow: var(--shadow-strong);
       display: grid; grid-template-columns: 1.12fr .88fr; gap: 28px; align-items: center;
@@ -344,7 +327,7 @@
       outline: none; transition: var(--transition);
     }
     .quote-card input:focus, .quote-card select:focus {
-      border-color: rgba(7,90,149,.42); box-shadow: 0 0 0 4px rgba(75,143,66,.10); background: #fff;
+      border-color: rgba(16,185,129,.55); box-shadow: 0 0 0 4px rgba(16,185,129,.10); background: #fff;
     }
     .quote-card .btn { width: 100%; margin-top: 8px; }
 
@@ -356,14 +339,14 @@
     .whatsapp-float {
       position: fixed; right: 18px; bottom: 18px; z-index: 60;
       width: 62px; height: 62px; border-radius: 50%;
-      background: #22c55e; color: #ffffff; display: grid; place-items: center;
+      background: #22c55e; color: #052e16; display: grid; place-items: center;
       box-shadow: 0 18px 50px rgba(34,197,94,.35); font-weight: 950; font-size: 1.25rem;
     }
     .mobile-cta {
       display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 59;
       min-height: 56px; align-items: center; justify-content: center; border-radius: 999px;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      color: #ffffff; font-weight: 950; box-shadow: 0 18px 50px rgba(34,197,94,.28);
+      background: linear-gradient(135deg, var(--green), #34d399);
+      color: #052e16; font-weight: 950; box-shadow: 0 18px 50px rgba(34,197,94,.28);
     }
 
     @media (max-width: 1000px) {
@@ -382,11 +365,8 @@
     @media (max-width: 640px) {
       .container { width: min(100% - 24px, 1180px); }
       .nav { min-height: 68px; }
-      .brand { min-width: 150px; }
-      .brand-logo { width: 172px; max-height: 44px; }
-      .brand-mark { width: 42px; height: 42px; border-radius: 14px; }
-      .hero-brand-card { width: 100%; align-items: center; }
-      .hero-brand-card img { width: 54px; height: 54px; }
+      .brand { font-size: 1rem; }
+      .brand-mark { width: 40px; height: 40px; border-radius: 14px; }
       .hero { padding-top: 54px; }
       .hero-actions .btn { width: 100%; }
       .trust-strip, .cards, .process, .gallery-grid, .benefits { grid-template-columns: 1fr; }
@@ -403,6 +383,48 @@
       .mobile-cta { display: flex; }
       body { padding-bottom: 78px; }
     }
+  
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 224px;
+      transition: var(--transition);
+    }
+
+    .brand:hover {
+      transform: translateY(-1px);
+    }
+
+    .brand-logo {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-mark {
+      display: none !important;
+    }
+
+    .nav {
+      min-height: 82px;
+    }
+
+    .navbar {
+      box-shadow: 0 10px 36px rgba(15, 23, 42, .045);
+    }
+
+    @media (max-width: 640px) {
+      .brand {
+        min-width: auto;
+      }
+
+      .brand-logo {
+        height: 48px;
+        max-width: 184px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -450,8 +472,8 @@
 
   <header class="navbar">
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Protege Sempre">
-        <img class="brand-logo" src="img/logo/protege-sempre-logo-360.png" alt="Protege Sempre" width="360" height="90" decoding="async">
+      <a class="brand" href="#inicio" aria-label="Protege Sempre - página inicial">
+        <img class="brand-logo" src="img/logo-protege-sempre.svg" alt="Protege Sempre" width="252" height="72">
       </a>
 
       <nav class="nav-links" aria-label="Menu principal">
@@ -479,10 +501,6 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <div class="hero-brand-card">
-            <img src="img/logo/protege-sempre-simbolo-96.png" alt="" width="96" height="99" decoding="async">
-            <div><strong>Protege Sempre</strong><span>Tranquilidade que se vê. Proteção que se sente.</span></div>
-          </div>
           <div class="eyebrow"><span class="pulse"></span> Redes de proteção em Varginha-MG e região</div>
           <h1>Proteção leve, segura e <span class="gradient-text">feita sob medida.</span></h1>
           <p class="hero-text">Instalação de redes de proteção, telas mosquiteiras, gatil e redes para quadras com acabamento profissional, visual discreto e orçamento rápido pelo WhatsApp.</p>
