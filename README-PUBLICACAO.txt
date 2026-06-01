@@ -30,3 +30,6 @@ Atualização:
 - Símbolo com escudo, rede e check
 - Cabeçalho mais profissional no desktop e celular
 - Remoção de textos internos de desenvolvimento
+
+
+Atualização: logo premium aplicada no topo em versão otimizada para cabeçalho, sem slogan pequeno.
