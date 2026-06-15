@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://protegesempre.com.br/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/hero-rede-protecao.jpg</image:loc>
+      <image:title>Rede de proteção instalada em sacada residencial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-sacada-vista.jpg</image:loc>
+      <image:title>Rede de proteção instalada em sacada com vista</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-sacada-apartamento.jpg</image:loc>
+      <image:title>Rede de proteção em sacada de apartamento</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-janela-residencial.jpg</image:loc>
+      <image:title>Rede de proteção em janela residencial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-piscina.jpg</image:loc>
+      <image:title>Rede de proteção sobre piscina</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/tela-mosquiteira-janela.jpg</image:loc>
+      <image:title>Tela mosquiteira instalada em janela</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-corredor-externo.jpg</image:loc>
+      <image:title>Rede de proteção em corredor externo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/tela-mosquiteira-janela-madeira.jpg</image:loc>
+      <image:title>Tela mosquiteira em janela de madeira</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-fachada-residencial.jpg</image:loc>
+      <image:title>Rede de proteção em fachada residencial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/antes-depois-01.jpg</image:loc>
+      <image:title>Instalação real de rede de proteção em execução</image:title>
+    </image:image>
   </url>
 </urlset>

@@ -75,6 +75,62 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vocês atendem somente Varginha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O atendimento é voltado para Varginha/MG e região. Para confirmar disponibilidade na sua cidade ou bairro, chame pelo WhatsApp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Consigo pedir orçamento por foto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Você pode enviar fotos do local, medidas aproximadas e o tipo de serviço desejado. Se necessário, é agendada uma avaliação técnica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As redes são indicadas para pets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. As redes são muito usadas para proteger gatos, cães e outros pets em janelas, sacadas, corredores e áreas externas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês fazem telas mosquiteiras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. As telas mosquiteiras ajudam a reduzir a entrada de insetos, mantendo ventilação e luminosidade no ambiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o prazo médio de instalação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O prazo varia conforme o tipo de serviço e demanda. Após o orçamento aprovado, informamos a data e tempo estimado de execução."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As redes prejudicam a vista da sacada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. As redes são instaladas com acabamento discreto e são praticamente invisíveis a distância, preservando a estética do ambiente."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --azul: #2A6F97;
@@ -321,42 +377,68 @@
       max-width: 400px;
     }
 
-    /* ── SERVIÇOS ── */
+    /* ── SERVIÇOS (BENTO GRID) ── */
     #servicos { padding: 5rem 0; }
     .service-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(170px, auto);
+      gap: 1.2rem;
     }
     .service-card {
       background: var(--white);
       border: 1px solid var(--linha);
       border-radius: var(--radius);
-      padding: 2rem 1.8rem;
+      padding: 1.8rem;
       transition: all .3s ease;
       position: relative; overflow: hidden;
+      grid-column: span 1;
     }
-    .service-card::before {
+    .service-card.span-2 { grid-column: span 2; }
+    .service-card.featured {
+      grid-column: span 2; grid-row: span 2;
+      padding: 2.2rem;
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+      color: #fff; border-color: transparent;
+      box-shadow: 0 18px 50px rgba(42,111,151,.25);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .service-card:not(.featured)::before {
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(135deg, var(--azul-claro) 0%, transparent 55%);
       opacity: 0; transition: opacity .3s;
     }
     .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: rgba(42,111,151,.2); }
-    .service-card:hover::before { opacity: 1; }
+    .service-card.featured:hover { box-shadow: 0 22px 60px rgba(42,111,151,.35); }
+    .service-card:not(.featured):hover::before { opacity: 1; }
+    .service-badge {
+      display: inline-flex; align-self: flex-start;
+      font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+      background: rgba(255,255,255,.16); color: #fff;
+      padding: .3rem .85rem; border-radius: 40px; margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
     .service-icon {
-      font-size: 2rem; margin-bottom: 1rem;
       width: 52px; height: 52px; border-radius: 14px;
-      background: var(--azul-claro);
+      background: var(--azul-claro); color: var(--azul);
+      margin-bottom: 1rem;
       display: flex; align-items: center; justify-content: center;
       position: relative; z-index: 1;
     }
+    .service-icon svg { width: 26px; height: 26px; }
+    .service-card.featured .service-icon {
+      width: 64px; height: 64px; background: rgba(255,255,255,.14); color: #fff;
+    }
+    .service-card.featured .service-icon svg { width: 30px; height: 30px; }
     .service-card h3 {
       font-size: 1.05rem; font-weight: 600; color: var(--grafite);
       margin-bottom: .5rem; position: relative; z-index: 1;
     }
+    .service-card.featured h3 { color: #fff; font-size: 1.5rem; }
     .service-card p {
       font-size: .87rem; color: var(--muted); line-height: 1.65;
       position: relative; z-index: 1;
     }
+    .service-card.featured p { color: rgba(255,255,255,.8); max-width: 320px; font-size: .92rem; }
 
     /* ── DIFERENCIAIS ── */
     .split-section { padding: 0; overflow: hidden; }
@@ -404,7 +486,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 240px);
+      grid-auto-rows: 240px;
       gap: 1rem;
     }
     .gallery-item {
@@ -574,22 +656,27 @@
       background: #111820; padding: 3rem 0 1.5rem;
     }
     .footer-grid {
-      display: grid; grid-template-columns: auto 1fr;
+      display: grid; grid-template-columns: auto 1fr 1fr;
       gap: 4rem; align-items: start;
       padding-bottom: 2rem;
       border-bottom: 1px solid rgba(255,255,255,.07);
     }
     .footer-grid img { height: 34px; width: auto; margin-bottom: .6rem; filter: brightness(0) invert(1); opacity: .7; }
     .footer-grid > div:first-child p { font-size: .82rem; color: rgba(255,255,255,.3); margin-top: .5rem; }
-    .footer-grid > div:last-child {
+    .footer-col {
       display: flex; flex-direction: column; gap: .55rem;
     }
     .footer-grid strong { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .3rem; display: block; }
     .footer-grid a { font-size: .88rem; color: rgba(255,255,255,.55); transition: color .2s; }
     .footer-grid a:hover { color: rgba(255,255,255,.9); }
+    .footer-col p { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.6; }
     .footer-bottom {
       padding-top: 1.5rem; font-size: .78rem;
       color: rgba(255,255,255,.22); text-align: center;
+    }
+    .footer-version {
+      display: block; margin-top: .35rem;
+      font-size: .7rem; color: rgba(255,255,255,.18);
     }
 
     /* ── FLOATING CTA ── */
@@ -626,10 +713,21 @@
     }
     .reveal.in { opacity: 1; transform: none; }
 
+    /* ── ACESSIBILIDADE: MOVIMENTO REDUZIDO ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 200px); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(150px, auto); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
       .gallery-item.featured { grid-column: 1 / 3; grid-row: span 2; }
       .process-grid { grid-template-columns: repeat(2, 1fr); }
       .process-grid::before { display: none; }
@@ -649,8 +747,10 @@
       .logo-band p { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.2rem; }
       .orc-grid { gap: 2rem; }
       .service-grid { grid-template-columns: 1fr; }
+      .service-card, .service-card.span-2, .service-card.featured { grid-column: span 1; grid-row: span 1; }
+      .service-card.featured { padding: 1.8rem; }
       .process-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 170px); }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; }
       .gallery-item.featured { grid-column: 1 / 3; grid-row: span 1; }
     }
   </style>
@@ -677,7 +777,7 @@
       <a href="#duvidas">Dúvidas</a>
     </nav>
 
-    <a class="btn btn-primary nav-cta" href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">Orçamento</a>
+    <a class="btn btn-primary nav-cta" href="#orcamento">Orçamento</a>
 
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu(this)">
       <span></span><span></span><span></span>
@@ -759,33 +859,87 @@
     </div>
 
     <div class="service-grid">
-      <article class="service-card reveal">
-        <div class="service-icon">🏠</div>
+      <article class="service-card featured reveal">
+        <span class="service-badge">Mais procurado</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <line x1="9" y1="3" x2="9" y2="21"/>
+            <line x1="15" y1="3" x2="15" y2="21"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="3" y1="15" x2="21" y2="15"/>
+          </svg>
+        </div>
         <h3>Redes de proteção</h3>
         <p>Instalação em janelas, sacadas, varandas, escadas e áreas de risco, com foco em segurança e acabamento discreto.</p>
       </article>
-      <article class="service-card reveal" style="transition-delay:.07s">
-        <div class="service-icon">🪟</div>
+      <article class="service-card span-2 reveal" style="transition-delay:.07s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="4" width="14" height="16" rx="2"/>
+            <line x1="3" y1="8" x2="17" y2="8"/>
+            <line x1="3" y1="12" x2="17" y2="12"/>
+            <line x1="3" y1="16" x2="17" y2="16"/>
+            <line x1="7" y1="4" x2="7" y2="20"/>
+            <line x1="11" y1="4" x2="11" y2="20"/>
+            <line x1="15" y1="4" x2="15" y2="20"/>
+            <circle cx="20" cy="6" r="1.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
         <h3>Telas mosquiteiras</h3>
         <p>Mais conforto contra mosquitos e insetos, mantendo ventilação, luminosidade e praticidade no dia a dia.</p>
       </article>
       <article class="service-card reveal" style="transition-delay:.14s">
-        <div class="service-icon">🐾</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false">
+            <ellipse cx="12" cy="15.5" rx="5" ry="4"/>
+            <ellipse cx="5.3" cy="10" rx="2.1" ry="2.6"/>
+            <ellipse cx="18.7" cy="10" rx="2.1" ry="2.6"/>
+            <ellipse cx="8.7" cy="6" rx="1.9" ry="2.4"/>
+            <ellipse cx="15.3" cy="6" rx="1.9" ry="2.4"/>
+          </svg>
+        </div>
         <h3>Gatil e proteção pet</h3>
         <p>Fechamento de áreas para gatos e pets, proporcionando liberdade, prevenção de acidentes e tranquilidade para a família.</p>
       </article>
       <article class="service-card reveal" style="transition-delay:.21s">
-        <div class="service-icon">🏊</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M2 7c1.5-1.4 3.5-1.4 5 0s3.5 1.4 5 0 3.5-1.4 5 0 3.5 1.4 5 0"/>
+            <path d="M2 13c1.5-1.4 3.5-1.4 5 0s3.5 1.4 5 0 3.5-1.4 5 0 3.5 1.4 5 0"/>
+            <path d="M2 19c1.5-1.4 3.5-1.4 5 0s3.5 1.4 5 0 3.5-1.4 5 0 3.5 1.4 5 0"/>
+          </svg>
+        </div>
         <h3>Piscinas e áreas de lazer</h3>
         <p>Redes de proteção para piscinas e ambientes externos, aumentando a segurança sem comprometer o espaço.</p>
       </article>
-      <article class="service-card reveal" style="transition-delay:.28s">
-        <div class="service-icon">🏸</div>
+      <article class="service-card span-2 reveal" style="transition-delay:.28s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <path d="M3 6c3 1.3 6 1.3 9 0s6-1.3 9 0"/>
+            <path d="M3 12c3 1.3 6 1.3 9 0s6-1.3 9 0"/>
+            <path d="M3 18c3 1.3 6 1.3 9 0s6-1.3 9 0"/>
+          </svg>
+        </div>
         <h3>Quadras e áreas esportivas</h3>
         <p>Redes de contenção e proteção para quadras, clubes, condomínios e espaços esportivos.</p>
       </article>
-      <article class="service-card reveal" style="transition-delay:.35s">
-        <div class="service-icon">🏢</div>
+      <article class="service-card span-2 reveal" style="transition-delay:.35s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="2" width="18" height="20" rx="1.5"/>
+            <rect x="6.5" y="5.5" width="3" height="3"/>
+            <rect x="11.5" y="5.5" width="3" height="3"/>
+            <rect x="16.5" y="5.5" width="3" height="3"/>
+            <rect x="6.5" y="10.5" width="3" height="3"/>
+            <rect x="11.5" y="10.5" width="3" height="3"/>
+            <rect x="16.5" y="10.5" width="3" height="3"/>
+            <rect x="6.5" y="15.5" width="3" height="3"/>
+            <rect x="11.5" y="15.5" width="3" height="3"/>
+            <rect x="16.5" y="15.5" width="3" height="3"/>
+          </svg>
+        </div>
         <h3>Condomínios e empresas</h3>
         <p>Atendimento consultivo para obras sob medida, com comunicação clara e orientação para cada ambiente.</p>
       </article>
@@ -830,32 +984,36 @@
 
     <div class="gallery-grid reveal">
       <article class="gallery-item featured">
-        <img src="img/galeria/rede-protecao-sacada-apartamento.jpg" alt="Rede de proteção em sacada de apartamento" loading="lazy">
+        <img src="img/galeria/rede-protecao-sacada-apartamento.jpg" alt="Rede de proteção em sacada de apartamento" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Sacadas</span><h3>Segurança sem perder a vista</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/rede-protecao-janela-residencial.jpg" alt="Rede de proteção em janela residencial" loading="lazy">
+        <img src="img/galeria/rede-protecao-janela-residencial.jpg" alt="Rede de proteção em janela residencial" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Janelas</span><h3>Proteção sob medida</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/rede-protecao-piscina.jpg" alt="Rede de proteção sobre piscina" loading="lazy">
+        <img src="img/galeria/rede-protecao-piscina.jpg" alt="Rede de proteção sobre piscina" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Piscinas</span><h3>Áreas de lazer mais seguras</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/tela-mosquiteira-janela.jpg" alt="Tela mosquiteira instalada em janela" loading="lazy">
+        <img src="img/galeria/tela-mosquiteira-janela.jpg" alt="Tela mosquiteira instalada em janela" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Mosquiteiras</span><h3>Conforto contra insetos</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/rede-protecao-corredor-externo.jpg" alt="Rede de proteção em corredor externo" loading="lazy">
+        <img src="img/galeria/rede-protecao-corredor-externo.jpg" alt="Rede de proteção em corredor externo" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Áreas externas</span><h3>Fechamentos seguros</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/tela-mosquiteira-janela-madeira.jpg" alt="Tela mosquiteira em janela de madeira" loading="lazy">
+        <img src="img/galeria/tela-mosquiteira-janela-madeira.jpg" alt="Tela mosquiteira em janela de madeira" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Acabamento</span><h3>Visual limpo e funcional</h3></div>
       </article>
       <article class="gallery-item">
-        <img src="img/galeria/rede-protecao-fachada-residencial.jpg" alt="Rede de proteção em fachada residencial" loading="lazy">
+        <img src="img/galeria/rede-protecao-fachada-residencial.jpg" alt="Rede de proteção em fachada residencial" width="960" height="1280" loading="lazy">
         <div class="gallery-caption"><span>Residencial</span><h3>Proteção para a casa toda</h3></div>
+      </article>
+      <article class="gallery-item">
+        <img src="img/galeria/antes-depois-01.jpg" alt="Instalação real de rede de proteção em execução" width="960" height="1280" loading="lazy">
+        <div class="gallery-caption"><span>Bastidores</span><h3>Instalação real, passo a passo</h3></div>
       </article>
     </div>
   </div>
@@ -980,13 +1138,21 @@
       >
       <p>Protege Sempre • Telas, redes e conforto familiar.</p>
     </div>
-    <div>
+    <div class="footer-col">
       <strong>Contato</strong>
       <a href="https://wa.me/553599936636?text=Olá!%20Quero%20um%20orçamento%20com%20a%20Protege%20Sempre." target="_blank" rel="noopener">WhatsApp: (35) 99936-636</a>
       <a href="https://www.instagram.com/protege_sempre/" target="_blank" rel="noopener">Instagram @protege_sempre</a>
     </div>
+    <div class="footer-col">
+      <strong>Área de atendimento</strong>
+      <p>Varginha-MG e cidades da região do Sul de Minas.</p>
+      <p>Confirme disponibilidade para o seu bairro pelo WhatsApp.</p>
+    </div>
   </div>
-  <div class="container footer-bottom">© <span id="year"></span> Protege Sempre. Todos os direitos reservados.</div>
+  <div class="container footer-bottom">
+    © <span id="year"></span> Protege Sempre. Todos os direitos reservados.
+    <span class="footer-version">Última atualização: 14/06/2026 às 21:03</span>
+  </div>
 </footer>
 
 <!-- FLOATING CTA -->
@@ -1024,6 +1190,30 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // CTA flutuante dinâmico por seção
+  const floatOrc = document.querySelector('.float-orc');
+  const ctaTexts = {
+    inicio: 'Pedir orçamento',
+    servicos: 'Orçar este serviço',
+    diferenciais: 'Quero minha proteção',
+    galeria: 'Quero uma instalação assim',
+    processo: 'Iniciar meu orçamento',
+    duvidas: 'Tirar dúvida e orçar'
+  };
+  const ctaObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      if (id === 'orcamento') {
+        floatOrc.style.display = 'none';
+      } else if (ctaTexts[id]) {
+        floatOrc.style.display = '';
+        floatOrc.textContent = ctaTexts[id];
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => ctaObserver.observe(s));
 
   // WhatsApp form
   function enviarWpp(e) {
