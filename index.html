@@ -455,7 +455,7 @@
     }
     .service-card.featured::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(42,111,151,.88) 0%, rgba(31,82,111,.93) 100%);
+      background: linear-gradient(135deg, rgba(42,111,151,.6) 0%, rgba(31,82,111,.78) 100%);
       z-index: 1;
     }
     .service-card.featured .service-badge,
@@ -463,6 +463,10 @@
     .service-card.featured h3,
     .service-card.featured p {
       z-index: 2;
+    }
+    .service-card.featured h3,
+    .service-card.featured p {
+      text-shadow: 0 2px 14px rgba(15,40,56,.45);
     }
     .service-card:not(.featured)::before {
       content: ''; position: absolute; inset: 0;
@@ -513,6 +517,7 @@
       position: relative;
       overflow: hidden;
       min-height: 380px;
+      border-radius: var(--radius);
     }
     .split-image img {
       position: absolute;
@@ -1235,7 +1240,7 @@
   </div>
   <div class="container footer-bottom">
     © <span id="year"></span> Protege Sempre. Todos os direitos reservados.
-    <span class="footer-version">Última atualização: 14/06/2026 às 22:11</span>
+    <span class="footer-version">Última atualização: 14/06/2026 às 22:20</span>
   </div>
 </footer>
 
