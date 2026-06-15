@@ -15,8 +15,8 @@
       <image:title>Rede de proteção instalada em sacada com vista</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-sacada-apartamento.jpg</image:loc>
-      <image:title>Rede de proteção em sacada de apartamento</image:title>
+      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-janela-detalhe.jpg</image:loc>
+      <image:title>Rede de proteção em janela, detalhe da malha ao entardecer</image:title>
     </image:image>
     <image:image>
       <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-janela-residencial.jpg</image:loc>
@@ -39,8 +39,8 @@
       <image:title>Tela mosquiteira em janela de madeira</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-fachada-residencial.jpg</image:loc>
-      <image:title>Rede de proteção em fachada residencial</image:title>
+      <image:loc>https://protegesempre.com.br/img/galeria/tela-mosquiteira-banheiro.jpg</image:loc>
+      <image:title>Tela mosquiteira instalada em janela de banheiro</image:title>
     </image:image>
     <image:image>
       <image:loc>https://protegesempre.com.br/img/galeria/antes-depois-01.jpg</image:loc>
@@ -49,6 +49,14 @@
     <image:image>
       <image:loc>https://protegesempre.com.br/img/galeria/rede-protecao-sacada-predio.jpg</image:loc>
       <image:title>Rede de proteção em sacada de prédio com vista da cidade</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/tela-mosquiteira-persiana.jpg</image:loc>
+      <image:title>Tela mosquiteira instalada em janela com persiana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://protegesempre.com.br/img/galeria/tela-mosquiteira-janela-ampla.jpg</image:loc>
+      <image:title>Tela mosquiteira em janela ampla ao entardecer</image:title>
     </image:image>
   </url>
 </urlset>
